@@ -225,6 +225,17 @@ header nav a  {
 .titre img {
     width: 600px; margin : 5% auto 5% auto;
 }
+@media all and (min-width: 840px){
+    .logo3 {
+        display: none;
+    }
+}
+
+@media all and (max-width: 840px){
+.logo2 {
+        display: none;
+    }
+}
 
 
 .color-gradient{
@@ -344,7 +355,7 @@ header nav a  {
     position : absolute;
 	
     overflow: hidden;
-
+    background-color: #635a4e;
     background:url("images/bg.png");
 
     background-size: 100%;
