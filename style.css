@@ -4,7 +4,7 @@ html,body {
     margin: 0;
     padding: 0;
     width: 100%;
-    height: 100%;
+    max-height: 300%;
     overflow-x:hidden;
 	text-align:center;
 	scroll-behavior: smooth;
@@ -353,7 +353,7 @@ header nav a  {
 
 
 .section2 {
-    height:300%;
+    height:auto;
     width: 100%;
     
     position : absolute;
@@ -423,12 +423,12 @@ header nav a  {
 
 footer{
     position: absolute;
-    height:20%;
+    height:200px;
     width: 100%;
     background-color: rgba(0, 0, 0,0.18);
-    position : absolute ;
+    position : relative ;
 	z-index : 1;
-    bottom: -300%;
+    bottom: 0px;
     align-items: center;
 }
 
@@ -438,8 +438,12 @@ footer h1{
 
 
 
+/*------------------------------------------------------*/
 
-@media all and (min-width: 840px){ /*le menu ne s'affiche que pour les tablettes et mobiles*/
+
+
+
+@media all and (min-width: 840px){ /*le menu ne s'affiche que pour les ordinateurs*/
 
 .para1 {
     z-index : 5;
@@ -451,11 +455,12 @@ footer h1{
     margin-bottom: 0;
     text-transform: uppercase;
     text-align: left;
+    padding-top: 5%;
 }
 
 .para1 .container-title {
     z-index : 5;
-    padding-top: 10%;
+    
 }
 
 .para1 h1 {
@@ -495,15 +500,12 @@ section {
     margin: 0 auto;
     width: 100%;
 }
-    .test{
-        height: 33%;
-        z-index: 5;
-    }
+
 
 section p {
     z-index : 5;
     font-size:18px;
-    position: absolute;
+    position: relative;
     right:2.5% ;
     text-align: justify;
     max-width: 1000px;
@@ -517,7 +519,7 @@ section p {
 
 
 .para2 {
-    padding-top: 10%;
+    padding-top: 5%;
     z-index : 5;
     display: block;
     margin: 0 auto;
@@ -568,7 +570,7 @@ section p {
 section .p2 {
     z-index : 5;
     font-size:18px;
-    position: absolute;
+    position: relative;
     left:2.5% ;
     text-align: justify;
     max-width: 1000px;
@@ -595,6 +597,7 @@ section .p2 {
     margin-bottom: 0;
     text-transform: uppercase;
     text-align: left;
+    padding-top: 5%;
 }
 
 .para3 .container-title {
@@ -632,6 +635,15 @@ section .p2 {
     font-family: Courrier;
 }
 }
+
+
+
+
+
+/*-----------------------------------------------------------------------------------*/
+
+
+
 
 
 
@@ -696,17 +708,15 @@ section {
 }
     
     
-    .test{
-        height: 33%;
-    }  
+   
 
 
 section p {
     z-index : 5;
     font-size:15px;
-    position: absolute;
+    position: relative;
     right:2.5% ;
-    
+    text-align: justify;
     max-width: 1000px;
     line-height: 100%;
     color: #dcdcdc;
@@ -771,7 +781,7 @@ section p {
 section .p2 {
     z-index : 5;
     font-size:15px;
-    position: absolute;
+    position: relative;
     left:2.5% ;
     
     max-width: 1000px;
