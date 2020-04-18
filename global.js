@@ -1,3 +1,23 @@
+
+
+function transition() {
+    
+    
+    var elmnt = document.getElementById("section2");
+  document.getElementById("transition").classList.remove('not-visible')
+    setTimeout(() => {   document.getElementById("body").style.overflowY = "visible";
+    elmnt.scrollIntoView({behavior: "smooth", inline: "nearest"})
+     document.getElementById("transition").classList.add('not-visible')                 
+                      
+                      
+                      ;}, 1500);
+}
+
+
+
+
+
+
 let observer = new IntersectionObserver(function (observables) {
   observables.forEach(function (observable) {
     // L'élément devient visible
