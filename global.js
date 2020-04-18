@@ -7,7 +7,7 @@ let observer = new IntersectionObserver(function (observables) {
     }
   })
 }, {
-  threshold: [0.9]
+  threshold: [0.5]
 });
 
 // On observe nos éléments
