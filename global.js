@@ -10,11 +10,18 @@ function transition() {
      document.getElementById("transition").classList.add('not-visible')                 
                       
                       
-                      ;}, 1500);
+                      ;}, 1000);
 }
+var a=1;
 
-
-
+function onClickMenu(){
+    
+	document.getElementById("menu").classList.toggle("change");
+    
+    document.getElementById("onglets").classList.toggle("change");
+     
+	
+}
 
 
 

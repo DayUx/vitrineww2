@@ -87,8 +87,8 @@ header nav a  {
     white-space:nowrap;
     align-items: center;
 	font-size:1.5em;
-    padding-left: 8.3%;
-    padding-right: 8.3%;
+    margin-left: 8.3%;
+    margin-right: 8.3%;
     
 }
 
@@ -138,6 +138,7 @@ header nav a  {
 	margin:0;
 	list-style:none;
 	text-align:right;
+    font-weight: bold;
 }
 
 #menumobile li{
@@ -162,14 +163,12 @@ header nav a  {
 	-moz-transition: .5s all .3s;
 	-webkit-transition: .5s all .3s;
 	transition: .5s all .3s;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    background: linear-gradient(rgba(0, 0, 0,0)0%, rgba(0,0,0,1)100%);
 }
 
-#menumobile li:hover ul {     /*lorsque le curseur survol le bouton du menu, la hauteur max du bloc qui se                                              deroule passe a 15em*/
-	max-height:15em;       /*les elements qui etaient invisible auparavant, deviennent visibles*/
-    border-bottom-left-radius: 30px;
-    border-bottom-right-radius: 30px;
-    
-}
+
 
 #menumobile li {  /* background des liens sous menus */
 	background:transparent;
@@ -177,7 +176,7 @@ header nav a  {
 
 #menumobile li li:hover {  /* background des liens menus et sous menus au survol */
 	
-    background: linear-gradient(rgba(0, 0, 0,0)0%, rgba(0,0,0,1)100%);
+    background: linear-gradient(rgba(0, 0, 0,1)0%, rgba(0,0,0,0.5)50%,rgba(0, 0, 0,1)100%);
 }
 
 #menumobile a {  /* les a href */
@@ -185,12 +184,62 @@ header nav a  {
 	text-align:right;
 	text-decoration:none;
 	display:block;
-	color:#fff;
+	color:white;
 }
 
-.onglets{
-    background: linear-gradient(rgba(0, 0, 0,0)0%, rgba(0,0,0,1)100%);
+
+#onglets.change{
+    max-height: 15em;
 }
+
+
+
+#menu{
+	width: 35px;
+	height: 30px;
+	margin: 30px 0 0 0;
+	cursor: pointer;
+}
+.bar{
+	height: 5px;
+	width: 100%;
+	background-color: #dbdbdb;
+	display: block;
+	border-radius: 5px;
+	transition: 0.3s ease;
+}
+#bar1{
+	transform: translateY(-4px);
+}
+#bar3{
+	transform: translateY(4px);
+}
+
+
+#menu-bar{
+	z-index: 2;	
+}
+
+.change .bar{
+	background-color: white;
+}
+.change #bar1{
+	transform: translateY(4px) rotateZ(-45deg);
+}
+.change #bar3{
+	transform: translateY(-6px) rotate(45deg);
+}
+.change #bar2{
+	opacity: 0;
+}
+.change{
+	display: block;
+}
+
+
+
+
+
 
 
 
@@ -289,6 +338,27 @@ header nav a  {
     opacity: 1;
     transition: transform 1s, opacity 1s;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
