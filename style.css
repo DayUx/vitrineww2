@@ -983,3 +983,33 @@ section {
     font-family: Courrier;
 }
 }
+
+
+
+
+
+
+
+@media all and (max-width: 839px){  /*Suppression du scrollbar sur les tablettes et mobiles*/
+	::-webkit-scrollbar {
+		display:none;
+	}
+}
+
+::-webkit-scrollbar {  /*Largeur du scrollbar*/
+	width: 12px;
+}
+
+::-webkit-scrollbar-track {  /* rail ou glisse le bloc pour monter et descendre */
+	background:#696154;
+}
+
+::-webkit-scrollbar-thumb {  /* bloc pour monter et descendre */
+	background: #423e39;
+	border-radius: 4px;
+	box-shadow: 0px 1px 4px black;
+}
+
+::-webkit-scrollbar-thumb:hover {  /*bloc pour monter et descendre lorsque la souris passe dessus  */
+	background: #504a42;
+}
