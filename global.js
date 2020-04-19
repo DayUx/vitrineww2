@@ -30,7 +30,11 @@ let observer = new IntersectionObserver(function (observables) {
     // L'élément devient visible
     if (observable.intersectionRatio > 0.5) {
       observable.target.classList.remove('not-visible')
-      observer.unobserve(observable.target)
+      
+    }else {
+        observable.target.classList.add('not-visible')
+        
+        
     }
   })
 }, {
