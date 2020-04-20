@@ -672,7 +672,9 @@ section {
     padding-left: 2.5%;
 }
 
-
+    .left img {
+        padding-left: 14%
+    }
 
 
 #para2 {
@@ -692,6 +694,13 @@ section {
     
     z-index : 5;
 }
+    
+    
+img#align2{
+        
+        padding-right: 14%;
+    
+    }  
 
 #para2 h1 {
     z-index : 5;
@@ -730,7 +739,7 @@ section {
     z-index : 5;
     font-size:18px;
     position: relative;
-    left:50%;
+    left:0;
     text-align: justify;
     width: 50%;
     line-height: 30px;
@@ -810,6 +819,33 @@ section {
 @media all and (max-width: 839px){
     
     
+  .left img {
+        padding-left: 14%
+    }
+img#align2{
+        
+        padding-right: 14%;
+    
+    }     
+    
+  .align1{
+    display : inline-block;
+    vertical-align : middle; 
+}
+    
+ #align2{
+    display : inline-block;
+    vertical-align : middle; 
+}   
+    
+.align3{
+    display : inline-block;
+    vertical-align : middle; 
+}  
+    
+    
+    
+    
 #para1 {
     z-index : 5;
     display: block;
@@ -873,7 +909,7 @@ section {
     position: relative;
     right:2.5% ;
     text-align: justify;
-    width: 75%;
+    width: 50%;
     line-height: 20px;
     color: #dcdcdc;
     font-family: Courrier;
@@ -938,9 +974,9 @@ section {
     z-index : 5;
     font-size:15px;
     position: relative;
-    left:25%;
+    left:0;
     text-align: justify;
-    width: 75%;
+    width: 50%;
     line-height: 20px;
     color: #dcdcdc;
     font-family: Courrier;
