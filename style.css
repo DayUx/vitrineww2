@@ -268,7 +268,7 @@ header nav a  {
 
 .titre {
     
-    font-size:6rem;
+    
     font-family:"Cookie";
     color:#cdcdcd;
     margin-bottom:10%;
@@ -276,7 +276,7 @@ header nav a  {
 }
 
 .titre img {
-    width: 60%; margin : 5% auto 5% auto;
+    width: 60%; margin : 0 auto 0 auto;
 }
 @media all and (min-width: 840px){
     .logo3 {
@@ -374,54 +374,62 @@ header nav a  {
 
 
 
+
+
+
+
+
+
+.shine div {
+    margin : 40% auto auto auto;
+	position: relative;
+    width: 100%;
+    
+    overflow: hidden;
+}
+.shine div::before {
+	position: absolute;
+	top: 0;
+	left: -75%;
+	z-index: 2;
+	display: block;
+	content: '';
+	width: 50%;
+	height: 100%;
+	background: -webkit-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,255,255,.3) 100%);
+	background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,.3) 100%);
+	-webkit-transform: skewX(-25deg);
+	transform: skewX(-25deg);
+}
+.shine div:hover::before {
+	-webkit-animation: shine 1s;
+	animation: shine 1s;
+}
+@-webkit-keyframes shine {
+	100% {
+		left: 125%;
+	}
+}
+@keyframes shine {
+	100% {
+		left: 125%;
+	}
+}
+
+.shine img{
+    width:100%;
+}
+
 .start {
-	width: 200px; margin : 0 auto auto auto;
+    width:25%;
+    margin:0 auto auto auto
 }
 
 
-.start2 {
-	width: 200px; margin : 0 auto auto auto;
-    
-	color:#dbdbdb;
-    display: block;
-    font-size: 20px;
-    background-color: transparent;
-    border: 1px solid #fff;
-    border-radius: 5px;
-    font-weight: bold;
-    width: 198px;
-    height: 58px;
-    outline: none;
-    margin-bottom: 10
-    
-}
 
 
-.start button {	
-	position : absolute;
-	color:#dbdbdb;
-    display: block;
-    font-size: 20px;
-    background-color: #1a2932;
-    border: 5px solid #1a2932;
-    border-radius: 3px;
-    font-weight: bold;
-    width: 200px;
-    height: 60px;
-    outline: none;
-    transition: 1s all;
-    box-shadow: inset 0px 0px 0px 0px rgba(0, 0, 0,0.75);
-    box-shadow: 0px 0px 15px 1px rgba(20, 20,20,0.75);
-}
 
-.start button:hover  {
-	cursor: pointer;
-    color:white;
-    box-shadow: inset 0px 0px 30px 0px rgba(0, 0, 0,0.75);
-    border-radius: 15px;
-    box-shadow: 0px 0px 0px 0px rgba(0, 0, 0,0.75);
-    background-color: transparent;
-}
+
 
 
 
@@ -818,6 +826,14 @@ img#align2{
 
 @media all and (max-width: 839px){
     
+    
+    
+    
+    
+.start {
+    width:35%;
+    margin:0 auto auto auto
+}
     
   .left img {
         padding-left: 2%;
