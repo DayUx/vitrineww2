@@ -1126,7 +1126,7 @@ section {
 	}
 	
 	.FlipPhone {
-		background-color:#2C2F33;
+		background:url("images/bg.jpg");
 		width: 100%;
 		height: 100%;
 		overflow: visible;
@@ -1136,7 +1136,7 @@ section {
 		top: 0; left: 0; bottom: 0; right: 0;
 	}
 	.FlipPhone h1 {
-		color:#7289DA;
+		color:#dedede;
 		text-align: center;
 		margin:  auto;
 		position: absolute;
