@@ -261,8 +261,11 @@ header.change{
     .qhd{
         display:visible;
     }
+        hd{
+        display:none;
+    }
 }
-
+}
 @media all and (min-height: 1080px){
     hd{
         display:none;
