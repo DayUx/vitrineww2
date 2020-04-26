@@ -12,6 +12,9 @@ html,body {
 	
 	
 }
+::-webkit-scrollbar {
+		display:none;
+	}
 body {
     
 	position:relative;
@@ -22,14 +25,24 @@ body {
 font-family: "Courrier";
 src: url("font/cour.ttf");
 }
+@font-face {
+    font-family: "chalk";
+    src: url("font/chalk.ttf");
 
+}
 /*__________________Header___________________*/
 
 
 
 
 
-
+.line{
+    margin: 10px auto 10px auto;
+    height:0px;
+    border:2px solid rgba(255,255,255,0.5);
+    border-radius:100%;
+    width: 80%;
+}
 
 
 header{
@@ -91,17 +104,27 @@ header.change{
     transition: 0.8s all;
 }
 
+
+    
+
+.bgmenu{
+    width: 100%;
+    bottom:0;
+    left:0;
+    position: absolute;
+}
 #onglets{
     
-    background: #fff;
+    height: 100%;
     width:100%;
     height:100%;
     position: relative;
 }
 #liens{
+    font-family: chalk;
     font-size:30px;
-    position: absolute;
-    top:30%;
+    position: relative;
+    top:0;
     left:50%;
     transform: translate(-50%);
     color:black;
@@ -109,12 +132,13 @@ header.change{
     text-decoration: none;
     font-weight: bold;
     padding: 0;
+    width: 90%;
 }
 
 #liens a{
     text-decoration: none;
-    color:black;
-    opacity: 0.5;
+    color:white;
+    opacity: 0.8;
 }
 
 #liens a:hover{
@@ -126,17 +150,19 @@ header.change{
 
 .logomenu{
     position: relative;
+    margin-top:1%; 
 }
 
 .border{
     position: absolute;
-    background:#fff;
-    
+    background:transparent;
+    overflow: scroll;
     top:20px;
     left:20px;
     bottom: 20px;
     right: 20px;
-    border: 2px solid black
+    border: 2px solid rgba(255,255,255,0.5);
+    
 }
 
 
@@ -153,7 +179,7 @@ header.change{
   top: 32px;
   width: 32px;
   height: 32px;
-  opacity: 0.3;
+  opacity: 0.5;
     transition: 0.5s all;
 
 }
@@ -167,8 +193,8 @@ header.change{
   content: ' ';
   height: 33px;
   width: 3px;
-  background-color: #333;
-    border: 2px solid #333;
+  background-color: #fff;
+    border: 2px solid #fff;
     border-radius: 20px;
     
 }
@@ -239,9 +265,20 @@ header.change{
 
 
 
+#onglet{
+    width: 100%;
+    height: 100%;
+    background: white;
+    z-index: 1;
+    position: absolute;
+    left:-100%;
+    transition: 0.8s all;
+    
+}
 
-
-
+#onglet.change{
+    transform: translate(100%,0%)
+}
 
 
 
@@ -277,6 +314,8 @@ header.change{
     font-weight: bold;
     padding: 20px;
     transition: 0.7s all;
+    	background-color: #fff;
+
 }
 
 
@@ -290,6 +329,23 @@ header.change{
 }
 
 
+    
+@media all and (max-width: 840px){
+    .start button {
+	border:3px solid white;
+    border-radius:10px;
+	color:#580000;
+    font-size: 30px;
+    font-weight: bold;
+    padding: 20px;
+    transition: 0.7s all;
+    	background-color: #fff;
+
+}
+    .titre .logo2 {
+    width: 100%;
+}
+}
 
 
 
@@ -623,30 +679,6 @@ p{
 
 
 
-@media all and (max-width: 839px){  /*Suppression du scrollbar sur les tablettes et mobiles*/
-	::-webkit-scrollbar {
-		display:none;
-	}
-}
-
-::-webkit-scrollbar {  /*Largeur du scrollbar*/
-	width: 12px;
-}
-
-::-webkit-scrollbar-track {  /* rail ou glisse le bloc pour monter et descendre */
-	background:#b2a99b;
-}
-
-::-webkit-scrollbar-thumb {  /* bloc pour monter et descendre */
-	background: #422c2c;
-	border-radius: 4px;
-	box-shadow: 0px 1px 4px black;
-    
-}
-
-::-webkit-scrollbar-thumb:hover {  /*bloc pour monter et descendre lorsque la souris passe dessus  */
-	background: #580000;
-}
 
 
 
@@ -686,7 +718,7 @@ p{
 	}
 	
 	.FlipPhone {
-		background:url("images/bg.jpg");
+		
 		width: 100%;
 		height: 100%;
 		overflow: visible;
@@ -717,9 +749,7 @@ p{
 		
 		
 	}
-	::-webkit-scrollbar {
-		display:none;
-	}
+	
 }
 
 @media all and (min-height: 420px){

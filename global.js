@@ -23,6 +23,13 @@ function onClickMenu(){
 	
 }
 
+function onglet1(){
+    
+    document.getElementById("onglet").classList.toggle("change");
+    
+    
+}
+
 
 
 let observer = new IntersectionObserver(function (observables) {
