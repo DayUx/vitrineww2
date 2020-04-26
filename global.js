@@ -18,7 +18,7 @@ function onClickMenu(){
     
 	document.getElementById("menu").classList.toggle("change");
     
-    document.getElementById("onglets").classList.toggle("change");
+    document.getElementById("top").classList.toggle("change");
      
 	
 }

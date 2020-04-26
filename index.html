@@ -12,12 +12,11 @@
     <title>Normandy RP</title>
 </head>	
 
-<div class=FlipPhone><h1>Retournez votre smartphone</h1><div><img class=Phone src="images/smartphone.png" height='90px' /></div></div>
 
 
 <body id=body>
     
-<div id="top"></div>
+
 <header id="top">
 
 
@@ -26,48 +25,37 @@
 
 
 	
-	<a class=logo href=#><img   src="images/logo.png" height="100%"/></a>
 	
 	
-	<nav class="nav" role="navigation">
 	
-        
-        
-        
-        
-		<a>Forum</a> 
-		<a>Collection</a> 
-		<a>Discord</a>
-		<a id=last-element>Groupe Steam</a>
-	</nav>
+	
 
-	<div class=menumobile>
-         
-         
-         
-         
-	<ul id="menumobile">
-	<li><a class=boutonmenu href="#"><div id="menu" onclick="onClickMenu()">
-				<div id="bar1" class="bar"></div>
-				<div id="bar2" class="bar"></div>
-				<div id="bar3" class="bar"></div>
-			</div></a>
-		<ul id="onglets">
+	
+    <div id=onglets><div class=border ><a onclick="onClickMenu()" class="close"></a>
+        <a class=logo href=#><img class=logomenu  src="images/logo.png" height="25%"/></a><ul id="liens">
 			<li><a href="#">Forum</a></li>
 			<li><a href="#">Collection</a></li>
 			<li><a href="#">Discord</a></li>
 			<li><a href="#">Groupe Steam</a></li>
-		</ul></li>
 		</ul>
-	</div>
+    
+   
+				
+			
+        </div>
+     <div id="menu" onclick="onClickMenu()">
+        <img   src="images/anneau.png" height="100%"/></div>
+    </div>
+    
+    
 </header>
 
-<button class=godown onclick=transition()>En savoir plus<img class=godown src="images/godown.svg" width="20px"/></button>
+
     
     
     
     
-    <div id=transition class=not-visible><img src="images/Gear.png" height="50px"width="50px" /></div>
+    
 
     <div class="section">
         <div class="titre">
@@ -76,98 +64,29 @@
      <img class=logo3  src="images/logo3.png" width="30%"/>
             
             <div class=start >
-			<a href='#'><div class=shine><div><img class=align1 src="images/start.png" /></div></div></a>
+			<button href='#'><div>S'ENGAGER</div></button>
             </div>
             
             
 		</div>
        
         
-        <div class="color-gradient"></div>
-    <div class=video-container>
-    <video autoplay loop muted >
-        
-        
-        <source src="video.mp4" type="video/mp4">
-        
-       
-        
-        
-        
-        </video>
-         </div>
+        <div class="container">
+		<ul id="scene">
+			<li class="layer" data-depth=".01"><img src="images/bg2.png"></li>
+			<li class="layer" data-depth=".04"><img src="images/bg.png"></li>
+			
+		</ul>
+	</div>
         
     </div>
     
-    <div class="section2" id=section2>
-    
-        
-        
-        
-        
-        
-    
-    <div  id="para1">
-        <div class="container-title">
-            <h1 id="title1">À propos</h1>
-            
-        </div>
-        
-        <hr id=hr1>
-        <h2>normandy rp</h2>
-   
-    <section class=left>
-        <p class=align1 >Normandy RP est une communauté réunissant des joueurs dans le domaine du Rôle Play. Nous sommes surtout gérants du serveur La Bataille de Normandie sur Garry's Mod. Vous pouvez ainsi  retrouver sur le serveur La Bataille de Normandie V5.</p><img class=align1 src="images/about.png" width="20%"/>
-    </section>
-         </div>
-        
-        
-        
-        
-        
-        
-            
 
-        <div  id="para2">
-        <div class="container-title">
-            <h1 id="title2">Contenu exclusif</h1>
-            
-        </div>
-        
-        <hr id=hr2>
-        <h2>normandy rp</h2>
-   
-    <section>
-        <img id=align2  src="images/tools.png" width="20%"/>
-        <p id=align2 class="p2">Nous avons la chance d'avoir avec nous une équipe de développeurs compétents, connaissant de nombreux langages de programmation tels que le LUA, HTML, CSS, JS ... Ainsi nous proposons à nos joueurs des scripts inédits, rendant l'immersion plus intense. Mais ce n'est pas tout, dans cette équipe, deux membres maîtrisent le logiciel Hammer Editor ce qui nous permet aujourd'hui de mettre à la disposition de nos joueurs, deux nouvelles maps jamais vus auparavant.    </p>
-    </section>
-        
-       </div>  
-        
-        
-      
-
-        <div  id="para3">
-        <div class="container-title">
-            <h1 id="title3">Communauté</h1>
-            
-        
-        
-        <hr id=hr3>
-        <h2>normandy rp</h2>
-    </div>
-    <section class=left>
-        <p class=align3>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p><img class=align3 src="images/community.png" width="20%"/>
-    </section>
-    </div>   
-
-    <footer>
-    <h1>NormandyRP© tous droits réservés</h1>
-    
-    
-    
-    
-    </footer>
 </div> 
     <script src="global.js"></script>
+    <script src="parallax.js"></script>
+    <script>
+		var scene = document.getElementById('scene');
+		var parallax = new Parallax(scene);
+	</script>
     </body>  
