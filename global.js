@@ -29,6 +29,21 @@ function onglet1(){
     
     
 }
+function onglet2(){
+    
+    document.getElementById("ongletdeux").classList.toggle("change");
+    
+    
+}
+
+function onglet3(){
+    
+    document.getElementById("onglettrois").classList.toggle("change");
+    
+    
+}
+
+
 
 
 
