@@ -251,9 +251,27 @@ header.change{
 
 
 
+@media all and (max-height: 1081px){
+    .qhd{
+        display:none;
+    }
+    
+    @media all and (min-width: 2460px){
+    
+    .qhd{
+        display:visible;
+    }
+}
 
-
-
+@media all and (min-height: 1080px){
+    hd{
+        display:none;
+    }
+    
+    
+    
+    
+}
 
 
 
@@ -351,7 +369,6 @@ header.change{
 
     background-size: 100%;
 }
-
 
 
 
