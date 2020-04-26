@@ -255,7 +255,9 @@ header.change{
     .qhd{
         display:none;
     }
-    
+    hd{
+        display:visible;
+    }
     @media all and (min-width: 2460px){
     
     .qhd{
@@ -271,13 +273,23 @@ header.change{
         display:none;
     }
     
-    
+    .qhd{
+        display:visible;
+    }
     
     
 }
 
 
-
+ @media all and (max-width: 2460px){
+    
+    .qhd{
+        display:none;
+    }
+        hd{
+        display:visible;
+    }
+}
 
 
 
