@@ -1,94 +1,88 @@
-html,body {
-	font-family: Nunito Sans;
-	color: #dbdbdb;
+html,
+body {
+    font-family: Nunito Sans;
+    color: #dbdbdb;
     margin: 0;
     padding: 0;
     width: 100%;
     max-height: 300%;
-    overflow:hidden;
-    
-	text-align:center;
-	
-	
-	
+    overflow: hidden;
+
+    text-align: center;
+
+
+
 }
+
 ::-webkit-scrollbar {
-		display:none;
-	}
+    display: none;
+}
+
 body {
-    
-	position:relative;
+
+    position: relative;
 }
 
 
 @font-face {
-font-family: "Courrier";
-src: url("font/cour.ttf");
+    font-family: "Courrier";
+    src: url("font/cour.ttf");
 }
-@font-face {
-    font-family: "chalk";
-    src: url("font/chalk.ttf");
 
-}
+
+
 /*__________________Header___________________*/
 
 
 #onglet img {
-    
+
     width: 50px;
-    
+
     right: -25px;
     position: absolute;
     transition: 0.8s all;
-    top:50%;
-    transform: translate(0,-50%);
-    
-    
+    top: 50%;
+    transform: translate(0, -50%);
+
+
 }
 
 
-.line{
+.line {
     margin: 10px auto 10px auto;
-    height:0px;
-    border:2px solid rgba(0,0,0,0.8);
-    border-radius:100%;
+    height: 0px;
+    border: 2px solid rgba(0, 0, 0, 0.8);
+    border-radius: 100%;
     width: 200px;
 }
 
 
-header{
-    
-    z-index:500;
-    
-    position:absolute;
-   
-    
-    top:-100%;
-    
+#onglets {
+    opacity:0;
+    z-index: 500;
+
+    position: absolute;
+    background:#fff;
+
+    top: -100%;
+
     width: 100%;
     height: 100%;
-	
+
     transition: 0.5s all;
-    color:#000;
-    
+    color: #000;
+
 }
 
 
-header.change{
+#onglets.change {
     transform: translate(0, 100%);
-    
-}
+        opacity:1;
 
-header.show{
-    transform: translate(0, 2%);
-    
+
 }
 
 
-header.show.change{
-    transform: translate(0, 100%);
-    
-}
 
 /*_____Menu Normal_____*/
 
@@ -113,8 +107,8 @@ header.show.change{
 
 
 
-#menu{
-    font-size:40px;
+#menu {
+    font-size: 40px;
     top: 19px;
     right: 19px;
     position: absolute;
@@ -123,129 +117,137 @@ header.show.change{
     color: white;
     border-right: 3px solid white;
     border-top: 3px solid white;
-    padding-left:12px;
-    padding-bottom:0;
-     padding-right:20px;
-    padding-top:10px;
+    padding-left: 12px;
+    padding-bottom: 0;
+    padding-right: 20px;
+    padding-top: 10px;
 }
 
 
-    
 
-.bgmenu{
+
+.bgmenu {
     width: 100%;
-    bottom:0;
-    left:0;
+    bottom: 0;
+    left: 0;
     position: absolute;
+        
+
 }
-#onglets{
+
+
+
+#liens {
     
-   background:url(images/bg.jpg);
-    background-size: 100%;
-    width:100%;
-    height:100%;
+    font-size: 30px;
     position: relative;
-}
-#liens{
-    font-family: chalk;
-    font-size:30px;
-    position: relative;
-    top:0;
-    left:50%;
+    top: 0;
+    left: 50%;
     transform: translate(-50%);
-    color:black;
-	list-style:none;
+    color: black;
+    list-style: none;
     text-decoration: none;
     font-weight: bold;
     padding: 0;
     width: 90%;
 }
 
-#liens a{
+#liens a {
     text-decoration: none;
-    color:black;
+    color: black;
     opacity: 0.8;
 }
 
-#liens a:hover{
+#liens a:hover {
     opacity: 1;
-    cursor:pointer;
+    cursor: pointer;
 }
 
 
 
 
 
-#infoUn{
+#infoUn {
     position: absolute;
     z-index: 100;
     left: 29px;
-    top:50%;
-    transform: translate(0,-50%);
-    
+    top: 50%;
+    transform: translate(0, -50%);
+    font-size: 15px;
+    font-family: Nunito Sans;
+    font-weight: bold;
+    transition: 0.8s all;
+
 }
 
-#infoUn:hover{
+#infoUn:hover {
     cursor: pointer;
-    
+    color:white;
+
 }
 
-#borderline{
+#borderline {
     position: absolute;
     z-index: 100;
     left: 19px;
-    top:50%;
-    transform: translate(0,-50%);
-    height: 20px;
+    top: 50%;
+    transform: translate(0, -50%);
+    height: 30px;
     width: 3px;
     background-color: white;
     transition: 0.8s all;
-    
-}
-#borderline.change{
-    
-    
-    height: 50px;
-    
+
 }
 
+#borderline.change {
+
+
+    height: 100px;
+
+}
 
 
 
 
-#infoDeux{
+
+#infoDeux {
     position: absolute;
     z-index: 100;
     right: 29px;
-    top:50%;
-    transform: translate(0,-50%);
-    
+    top: 50%;
+    transform: translate(0, -50%);
+    font-size: 15px;
+    font-family: Nunito Sans;
+    font-weight: bold;
+    transition: 0.8s all;
+
 }
 
-#infoDeux:hover{
+#infoDeux:hover {
     cursor: pointer;
-    
+    color:white;
+
 }
 
-#borderlinedeux{
+#borderlinedeux {
     position: absolute;
     z-index: 100;
     right: 19px;
-    top:50%;
-    transform: translate(0,-50%);
-    height: 20px;
+    top: 50%;
+    transform: translate(0, -50%);
+    height: 30px;
     width: 3px;
     background-color: white;
     transition: 0.8s all;
-    
-}
-#borderlinedeux.change{
-    
-    
-    height: 50px;
-    
+
 }
 
+#borderlinedeux.change {
+
+
+    height: 100px;
+
+}
 
 
 
@@ -264,71 +266,78 @@ header.show.change{
 
 
 
-.logomenu{
+
+.logomenu {
     position: relative;
-    margin-top:1%; 
+    margin-top: 1%;
 }
 
-.border{
+#bordure {
     position: absolute;
-    background:transparent;
-    
-    top:20px;
-    left:20px;
+    background: transparent;
+    overflow: scroll;
+    top: 20px;
+    left: 20px;
     bottom: 20px;
     right: 20px;
-    border: 1px solid rgba(255,255,255,0.8);
-    
+    border: 1px solid rgba(255, 255, 255, 0.8);
     z-index: 1;
-    
+
+}
+
+
+
+#bordure.change {
+    z-index: 1000;
 }
 
 
 
 
 
-
-
-
-
-#menu:hover{
+#menu:hover {
     
     cursor: pointer;
-   padding-bottom: 50px;
+    padding-bottom: 50px;
     padding-left: 58px;
 }
 
 
 .close {
-  position: absolute;
-  right: 32px;
-  top: 32px;
-  width: 32px;
-  height: 32px;
-  opacity: 0.5;
+    position: absolute;
+    right: 32px;
+    top: 32px;
+    width: 32px;
+    height: 32px;
+    opacity: 0.5;
     transition: 0.5s all;
 
 }
+
 .close:hover {
-  opacity: 1;
-    cursor:pointer;
+    opacity: 1;
+    cursor: pointer;
 }
-.close:before, .close:after {
-  position: absolute;
-  left: 15px;
-  content: ' ';
-  height: 33px;
-  width: 3px;
-  background-color: black;
+
+.close:before,
+.close:after {
+    position: absolute;
+    left: 15px;
+    content: ' ';
+    height: 33px;
+    width: 3px;
+    background-color: black;
     border: 2px solid black;
     border-radius: 20px;
-    
+
 }
+
 .close:before {
-  transform: rotate(45deg);
+    transform: rotate(45deg);
 }
+
 .close:after {
-  transform: rotate(-45deg);
+    transform: rotate(-45deg);
 }
 
 
@@ -346,26 +355,27 @@ header.show.change{
 
 .section {
     position: relative;
-    width:100%;
-    height:100vh;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    background:#424242;
-    width
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #424242;
+    
 }
 
 .titre {
-    
-    
+
+
     position: absolute;
-    color:#cdcdcd;
-    bottom:20%;
-    z-index:3;  
+    color: #cdcdcd;
+    bottom: 20%;
+    z-index: 3;
 }
 
 .titre .logo2 {
-    width: 60%; margin : 0 auto 0 auto;
+    width: 60%;
+    margin: 0 auto 0 auto;
 }
 
 
@@ -390,33 +400,33 @@ header.show.change{
 
 
 
-#onglet{
-    background:white;
+#onglet {
+    background: white;
     background-size: 100%;
     width: 100%;
     height: 100%;
-    
+    opacity: 0;
     z-index: 1000;
     position: absolute;
-    left:-100%;
-    bottom: -100%;
+    left: -100%;
+    bottom: 0;
     transition: 0.8s all;
-    
+
 }
 
-#onglet.change{
-    transform: translate(100%,0%)
+#onglet.change {
+    transform: translate(100%, 0%);
+        opacity:1;
 }
 
-h1{
-    font-family: chalk;
-    font-size:50px;
-    
+h1 {
+    font-size: 50px;
+
 }
+
 p {
-    margin : 100px 5% 0 5%;
-    font-family: chalk;
-    font-size:30px;
+    margin: 100px 5% 0 5%;
+    font-size: 30px;
     text-align: justify;
 }
 
@@ -424,21 +434,23 @@ p {
 
 
 
-#onglettrois{
-    background:url(images/bg.jpg);
+#onglettrois {
+    background:white;
     background-size: 100%;
     width: 100%;
     height: 100%;
-    bottom: -100%;
+    bottom: 0;
     z-index: 1000;
     position: absolute;
-    right:-100%;
+    right: -100%;
     transition: 0.8s all;
-    
+    opacity:0;
+
 }
 
-#onglettrois.change{
-    transform: translate(-100%,0%)
+#onglettrois.change {
+    transform: translate(-100%, 0%);
+    opacity:1;
 }
 
 
@@ -459,14 +471,15 @@ p {
 
 
 .start button {
-	border:3px solid white;
-    border-radius:10px;
-	color:#580000;
+    border: 2px solid white;
+    border-radius: 2px;
+    color: white;
     font-size: 50px;
     font-weight: bold;
     padding: 20px;
-    transition: 0.7s all;
-    	background-color: #fff;
+    transition: 0.9s all;
+    background-color: transparent;
+    box-shadow: inset 0px 0px 0px 0px #fff;
 
 }
 
@@ -474,30 +487,31 @@ p {
 
 .start button:hover {
 
-	background-color: transparent;
-    color:white;
+    background-color: white;
+    color: #580000;
     cursor: pointer;
-    
-	
+    box-shadow: inset 0px 0px 0px 100px #fff;
+
 }
 
 
-    
-@media all and (max-width: 840px){
+
+@media all and (max-width: 840px) {
     .start button {
-	border:3px solid white;
-    border-radius:10px;
-	color:#580000;
-    font-size: 30px;
-    font-weight: bold;
-    padding: 20px;
-    transition: 0.7s all;
-    	background-color: #fff;
+        border: 2px solid white;
+        border-radius: 10px;
+        color: #580000;
+        font-size: 30px;
+        font-weight: bold;
+        padding: 20px;
+        transition: 0.7s all;
+        background-color: #fff;
 
-}
+    }
+
     .titre .logo2 {
-    width: 100%;
-}
+        width: 100%;
+    }
 }
 
 
@@ -550,59 +564,81 @@ p {
 /*------------------------------------Flip the phone----------------------------*/
 
 
-@media all and (min-height: 301px){
-    .FlipPhone {display:none;}
+@media all and (min-height: 301px) {
+    .FlipPhone {
+        display: none;
+    }
 }
 
 
 
-@media all and (max-height: 300px){
-	body {
-		overflow-y: hidden;
-	}
-	
-	.FlipPhone {
-		
-		width: 100%;
-		height: 100%;
-		overflow: visible;
-		z-index:1000;
-		margin:0 auto;
-		position: absolute;
-		top: 0; left: 0; bottom: 0; right: 0;
-	}
-	.FlipPhone h1 {
-		color:#dedede;
-		text-align: center;
-		margin:  auto;
-		position: absolute;
-		top: 30%; left: 0; bottom: 0; right: 0;
-		
-		
-	}
-	.Phone {
-		padding:0 5% 0 5% ;
-		animation-name: rotate;
-		animation-duration: 2s;
-		animation-iteration-count: infinite;
-		animation-timing-function: ease-in-out;
-		margin:  auto;
-		position: absolute;
-		top: 50%; left: 0; bottom: 0; right: 0;
-		
-		
-		
-	}
-	
+@media all and (max-height: 300px) {
+    body {
+        overflow-y: hidden;
+    }
+
+    .FlipPhone {
+
+        width: 100%;
+        height: 100%;
+        overflow: visible;
+        z-index: 1000;
+        margin: 0 auto;
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+    }
+
+    .FlipPhone h1 {
+        color: #dedede;
+        text-align: center;
+        margin: auto;
+        position: absolute;
+        top: 30%;
+        left: 0;
+        bottom: 0;
+        right: 0;
+
+
+    }
+
+    .Phone {
+        padding: 0 5% 0 5%;
+        animation-name: rotate;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-in-out;
+        margin: auto;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        bottom: 0;
+        right: 0;
+
+
+
+    }
+
 }
 
-@media all and (min-height: 420px){
-	.FlipPhone {
-		display:none;
-	}
+@media all and (min-height: 420px) {
+    .FlipPhone {
+        display: none;
+    }
 }
+
 @keyframes rotate {
-    from 	{ transform: rotate(90deg); }
-	75%		{ transform: rotate(0); }    
-    to   	{ transform: rotate(0); }    
+    from {
+        transform: rotate(90deg);
+    }
+
+    75% {
+        transform: rotate(0);
+    }
+
+    to {
+        transform: rotate(0);
+    }
 }
