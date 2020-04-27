@@ -19,7 +19,7 @@ function onClickMenu(){
 	document.getElementById("menu").classList.toggle("change");
     
     document.getElementById("top").classList.toggle("change");
-     
+     document.getElementById("top").classList.toggle("show");
 	
 }
 
@@ -43,8 +43,18 @@ function onglet3(){
     
 }
 
-
-
+function line1(){
+    
+    document.getElementById("borderline").classList.toggle("change");
+    
+    
+}
+function line2(){
+    
+    document.getElementById("borderlinedeux").classList.toggle("change");
+    
+    
+}
 
 
 let observer = new IntersectionObserver(function (observables) {
