@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!DOCTYPE html>
 <html lang="fr">
 
 <head>
@@ -8,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="viewport" content="width=device-width, user-scalable=no">
     <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
+    <link rel="shortcut icon" href="pictures/logo.png" type="image/x-icon">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,600,700,800&amp;display=swap" rel="stylesheet">
     <title>Normandy RP</title>
@@ -17,54 +16,59 @@
 
 
 <body id=body>
-
-
-   
-
-
-
-
-
-
-
-
     <div class="section">
-        
+
         <div id=bordure>
+            <!-- Cadre dans lequel les pages apparaissent -->
+
+
+
+
+
+            <!------------------------------ Menu ---------------------------->
             <div id=onglets>
-            <a onclick="onClickMenu()" class="close"></a>
-                <a class=logo href=#><img class=logomenu src="images/logo.png" height="25%" /></a>
+                <a onclick="onClickMenu()" class="close2"></a>
+                <div class=titremenu>
+                <a class=logo href=#><img class=logomenu src="pictures/logo.png"  /></a>
                 <ul id="liens">
-                    <li><a href="#">Forum</a></li>
-                    <div class=line></div>
-                    <li><a href="#">Collection</a></li>
-                    <div class=line></div>
-                    <li><a href="#">Discord</a></li>
-                    <div class=line></div>
-                    <li><a href="#">Groupe Steam</a></li>
-                    <div class=line></div>
+
+                     <li><a >Forum</a></li>
+                    <li><a >Collection</a></li>
                     <li><a onclick="onglet1()">À propos</a></li>
-                    <div class=line></div>
                     <li><a onclick="onglet2()">Communauté</a></li>
-                    <div class=line></div>
                     <li><a onclick="onglet3()">Contenu exclusif</a></li>
 
                 </ul>
-
-
-
-
-           
-
-        </div>
+				
+                </div>
+				
+				
+				<div class=containerMenu>
+				
+					<img class=logoReseauxSociaux src="pictures/youtube.svg" />
+					<img class=logoReseauxSociaux src="pictures/steam.svg"  />
+					<img class=logoReseauxSociaux src="pictures/discord.svg"  />
+				
+				
+				
+				</div>
+				
+            </div>
             <div id=onglet>
-            <a onclick="onglet1()" class="close"></a>
+                <a onclick="onglet1()" class="close"></a>
                 <h1>À propos</h1>
                 <p>Normandy RP est une communauté réunissant des joueurs dans le domaine du Rôle Play. Nous sommes
                     surtout gérants du serveur La Bataille de Normandie sur Garry's Mod. Vous pouvez ainsi retrouver sur
                     le serveur La Bataille de Normandie V5.</p>
-            
-        </div>
+            </div>
+
+
+
+
+            <!------------------------------ Onglet Se Connecter ---------------------------->
+
+
+
             <div id=onglettrois><a onclick="onglet3()" class="close"></a>
                 <h1>Contenu exclusif</h1>
                 <p>Nous avons la chance d'avoir avec nous une équipe de développeurs compétents, connaissant de nombreux
@@ -72,50 +76,74 @@
                     scripts inédits, rendant l'immersion plus intense. Mais ce n'est pas tout, dans cette équipe, deux
                     membres maîtrisent le logiciel Hammer Editor ce qui nous permet aujourd'hui de mettre à la
                     disposition de nos joueurs, deux nouvelles maps jamais vus auparavant. </p>
-            </div>
-
+			</div>
         </div>
+
+
+
+
+
+        <!------------------------------ Bouton Menu, A propos et se connecter ---------------------------->
         <div id="menu" onclick="onClickMenu()">
             ☰</div>
-        <a onclick="onglet1()" onmouseover=line1() onmouseout=line1() id=infoUn>A propos</a>
+        <a onclick="onglet1()" onmouseover=line1() onmouseout=line1() id=infoUn>À propos</a>
         <div id=borderline></div>
-        <a onclick="onglet3()" onmouseover=line2() onmouseout=line2() id=infoDeux>Contenu</a>
+        <a onclick="onglet3()" onmouseover=line2() onmouseout=line2() id=infoDeux>Notre contenu</a>
         <div id=borderlinedeux></div>
-        
-        
-        
+
+
+        <!------------------------------ Logo et bouton au centre de l'ecran quand on arrive sur le site ---------------------------->
         <div class="titre">
-            <img class=logo2 src="images/logo2.png" width="30%" />
+            <img class=logo2 src="pictures/logo2.png" width=40% />
 
 
 
             <div class=start>
-                
+
                 <button href='#'>
-                    <div>S'ENGAGER</div>
+                    <div>C'EST PARTI !</div>
                 </button>
             </div>
-
-
         </div>
 
-
+        <!------------------------------ arriere plan anime ---------------------------->
         <div class="container">
             <ul id="scene">
-                <li class="layer" data-depth=".01"><img src="images/bg2.png"></li>
-                <li class="layer" data-depth=".04"><img src="images/bg.png"></li>
-
+                <li class="layer" data-depth=".01"><img src="pictures/bg2.png"></li>
+                <li class="layer" data-depth=".04"><img src="pictures/bg.png"></li>
             </ul>
         </div>
-
-
-
-
     </div>
+
+
+
+
+    <!------------------------------ arriere plan anime ---------------------------->
     <script src="global.js"></script>
+
+
+
+
+    <!-- Script arriere plan (vient de github et est libre d'utilisation) -->
     <script src="parallax.js"></script>
     <script>
         var scene = document.getElementById('scene');
         var parallax = new Parallax(scene);
     </script>
+
+
+
+
+    <!-- script pour le bouton -->
+    <script language="javascript" type="text/javascript">
+        function
+        buttonCommand() {
+            alert("Les développeurs Olivier, Louka,  et Paul n'ont pas fini de développer cette partie du site internet.")
+            }
+    </script>
+
+
+
+
+
 </body>

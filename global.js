@@ -26,6 +26,10 @@ function onClickMenu() {
   document.getElementById("bordure").classList.toggle("change");
 }
 
+
+
+
+
 function onglet1() {
 
   document.getElementById("onglet").classList.toggle("change");
@@ -39,6 +43,24 @@ function onglet2() {
 
   document.getElementById("bordure").classList.toggle("change");
 }
+
+
+
+function onglet3_2() {
+     document.getElementById("onglettrois").classList.toggle("change");
+    
+    document.getElementById("onglets").classList.toggle("change");   
+}
+
+
+function onglet1_2() {
+     document.getElementById("onglet").classList.toggle("change");
+    
+    document.getElementById("onglets").classList.toggle("change");   
+}
+
+
+
 
 function onglet3() {
 

@@ -29,46 +29,70 @@ body {
     src: url("font/cour.ttf");
 }
 
+.containerMenu{
+	display:inline-flex;
+	flex-direction:row;
+	justify-content:space-around;
+	width:100%;
+	height:10%;
+}
+.logoReseauxSociaux {
+	height: 100%;
+	
+	border-radius:100000px;
+	-webkit-transform: scale(1);
+	transform: scale(1);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+	
+}
 
-
-/*__________________Header___________________*/
-
-
-#onglet img {
-
-    width: 50px;
-
-    right: -25px;
-    position: absolute;
-    transition: 0.8s all;
-    top: 50%;
-    transform: translate(0, -50%);
-
-
+.logoReseauxSociaux:hover {
+	-webkit-transform: scale(1.15);
+	transform: scale(1.15);
+	cursor:pointer;
+	
 }
 
 
-.line {
-    margin: 10px auto 10px auto;
-    height: 0px;
-    border: 2px solid rgba(0, 0, 0, 0.8);
-    border-radius: 100%;
-    width: 200px;
+
+.containerMenu{
+-webkit-transition: .3s all;
+	transition: .3s all;
 }
+.containerMenu:hover{
+    -webkit-transform: scale(1.02);
+	transform: scale(1.02);
+	
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 #onglets {
-    opacity:0;
+    opacity: 0;
     z-index: 500;
 
     position: absolute;
-    background:#fff;
+    background: #fff;
 
     top: -100%;
 
     width: 100%;
     height: 100%;
-
+    display: flex;
+	flex-direction:column;
+    align-items: center;
+    justify-content: center;
     transition: 0.5s all;
     color: #000;
 
@@ -77,10 +101,28 @@ body {
 
 #onglets.change {
     transform: translate(0, 100%);
-        opacity:1;
+    opacity: 1;
 
 
 }
+
+.logomenu {
+    height: 20%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -114,13 +156,14 @@ body {
     position: absolute;
     transition: 0.8s all;
     z-index: 100;
-    color: white;
-    border-right: 3px solid white;
-    border-top: 3px solid white;
+    color: #fff;
+    border-right: 3px solid #fff;
+    border-top: 3px solid #fff;
     padding-left: 12px;
     padding-bottom: 0;
     padding-right: 20px;
     padding-top: 10px;
+    
 }
 
 
@@ -131,7 +174,7 @@ body {
     bottom: 0;
     left: 0;
     position: absolute;
-        
+
 
 }
 
@@ -148,19 +191,36 @@ body {
     list-style: none;
     text-decoration: none;
     font-weight: bold;
-    padding: 0;
-    width: 90%;
+    padding: 20px;
+    width: 100%;
+    
 }
 
-#liens a {
+#liens li {
+    margin-top: 3px;
+    text-align: center;
+    width: auto;
     text-decoration: none;
     color: black;
     opacity: 0.8;
+    transition: 0.3s all;
+    background-color:rgba(0,0,0,0.19);
+        border-radius:3px;
+
+    
 }
 
-#liens a:hover {
-    opacity: 1;
+
+
+
+#liens li:hover {
+        background-color:rgba(0,0,0,0.29);
+    -webkit-transform: scale(1.1);
+	transform: scale(1.1);
+    border-radius:5px;
+    color:#580000;
     cursor: pointer;
+    
 }
 
 
@@ -168,6 +228,8 @@ body {
 
 
 #infoUn {
+    color: white;
+    opacity: 0.8;
     position: absolute;
     z-index: 100;
     left: 29px;
@@ -181,8 +243,9 @@ body {
 }
 
 #infoUn:hover {
+    opacity: 1;
     cursor: pointer;
-    color:white;
+    color: white;
 
 }
 
@@ -211,10 +274,12 @@ body {
 
 
 #infoDeux {
+    opacity: 0.8;
     position: absolute;
     z-index: 100;
     right: 29px;
     top: 50%;
+    color: white;
     transform: translate(0, -50%);
     font-size: 15px;
     font-family: Nunito Sans;
@@ -224,8 +289,9 @@ body {
 }
 
 #infoDeux:hover {
+    opacity: 1;
     cursor: pointer;
-    color:white;
+    
 
 }
 
@@ -267,6 +333,10 @@ body {
 
 
 
+
+
+
+
 .logomenu {
     position: relative;
     margin-top: 1%;
@@ -275,20 +345,21 @@ body {
 #bordure {
     position: absolute;
     background: transparent;
-    overflow: scroll;
+    overflow: hidden;
     top: 20px;
     left: 20px;
     bottom: 20px;
     right: 20px;
-    border: 1px solid rgba(255, 255, 255, 0.8);
+    border: 1px solid white;
     z-index: 1;
-
+    transition: 0.8s all;
 }
 
 
 
 #bordure.change {
     z-index: 1000;
+    /*background-color: #fff;*/
 }
 
 
@@ -296,11 +367,15 @@ body {
 
 
 #menu:hover {
-    
+
     cursor: pointer;
     padding-bottom: 50px;
     padding-left: 58px;
 }
+
+
+
+
 
 
 .close {
@@ -315,7 +390,7 @@ body {
 }
 
 .close:hover {
-    opacity: 1;
+    opacity: 0.8;
     cursor: pointer;
 }
 
@@ -341,10 +416,48 @@ body {
 }
 
 
+.close2 {
+    position: absolute;
+    right: 32px;
+    top: 32px;
+    width: 32px;
+    height: 32px;
+    opacity: 0.5;
+    transition: 0.5s all;
+    z-index: 1000;
+
+}
+
+.close2:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.close2:before,
+.close2:after {
+    position: absolute;
+    left: 15px;
+    content: ' ';
+    height: 33px;
+    width: 3px;
+    background-color: black;
+    border: 2px solid black;
+    border-radius: 20px;
+
+}
+
+.close2:before {
+    transform: rotate(45deg);
+}
+
+.close2:after {
+    transform: rotate(-45deg);
+}
 
 
 
-/*__________________Section1___________________*/
+
+/*__________________Section___________________*/
 
 
 
@@ -361,21 +474,63 @@ body {
     align-items: center;
     justify-content: center;
     background: #424242;
-    
+
 }
 
 .titre {
-
-
+    
+    width: 100%;
     position: absolute;
     color: #cdcdcd;
-    bottom: 20%;
+
     z-index: 3;
 }
 
 .titre .logo2 {
-    width: 60%;
-    margin: 0 auto 0 auto;
+
+    margin-bottom: 10%;
+    top: 0;
+
+}
+.titremenu{
+	height:80%;
+    width: 95%;
+}
+
+
+
+
+
+.start2 {
+    width: 100%;
+    position: relative;
+    margin-left: 50%;
+
+}
+
+.start2 button {
+    transform: translate(-50%);
+    border: 2px solid white;
+    border-radius: 2px;
+    color: white;
+    font-size: 50px;
+    font-weight: bold;
+    padding: 20px;
+    transition: 0.9s all;
+    background-color: transparent;
+    box-shadow: inset 0px 0px 0px 0px white;
+
+}
+
+
+
+.start2 button:hover {
+
+
+    color: #fff;
+    cursor: pointer;
+    box-shadow: inset 0px 0px 0px 100px white;
+
 }
 
 
@@ -384,6 +539,19 @@ body {
 
 
 
+.txt_sect2_2 {
+    text-align: left;
+    font-size: 20px;
+
+    margin-top: 2%;
+    margin-bottom: 2%;
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 1%;
+
+    overflow: none;
+    z-index: 3;
+    position: relative;
+}
 
 
 
@@ -401,7 +569,7 @@ body {
 
 
 #onglet {
-    background: white;
+    background-color: #fff;
     background-size: 100%;
     width: 100%;
     height: 100%;
@@ -416,7 +584,8 @@ body {
 
 #onglet.change {
     transform: translate(100%, 0%);
-        opacity:1;
+    opacity: 1;
+
 }
 
 h1 {
@@ -435,8 +604,7 @@ p {
 
 
 #onglettrois {
-    background:white;
-    background-size: 100%;
+background-color: #fff;    
     width: 100%;
     height: 100%;
     bottom: 0;
@@ -444,13 +612,14 @@ p {
     position: absolute;
     right: -100%;
     transition: 0.8s all;
-    opacity:0;
+    opacity: 0;
+    overflow: scroll;
 
 }
 
 #onglettrois.change {
     transform: translate(-100%, 0%);
-    opacity:1;
+    opacity: 1;
 }
 
 
@@ -471,9 +640,9 @@ p {
 
 
 .start button {
-    border: 2px solid white;
+    border: 2px solid #fff;
     border-radius: 2px;
-    color: white;
+    color: #fff;
     font-size: 50px;
     font-weight: bold;
     padding: 20px;
@@ -487,8 +656,8 @@ p {
 
 .start button:hover {
 
-    background-color: white;
-    color: #580000;
+    background-color: #fff;
+    color: white;
     cursor: pointer;
     box-shadow: inset 0px 0px 0px 100px #fff;
 
@@ -498,22 +667,26 @@ p {
 
 @media all and (max-width: 840px) {
     .start button {
-        border: 2px solid white;
-        border-radius: 10px;
-        color: #580000;
+        margin-top:100px;
+        border: 2px solid #fff;
+        border-radius: 2px;
+        color: #fff;
         font-size: 30px;
         font-weight: bold;
         padding: 20px;
         transition: 0.7s all;
-        background-color: #fff;
-
+        background-color: transparent;
+        box-shadow: inset 0px 0px 0px 0px #fff;
+        margin-right: 25px;
+        margin-left: 25px;
     }
+    
 
     .titre .logo2 {
-        width: 100%;
+        
+        width: 75%;
     }
 }
-
 
 
 
@@ -629,16 +802,22 @@ p {
     }
 }
 
-@keyframes rotate {
+@keyframes ring {
     from {
-        transform: rotate(90deg);
+         box-shadow: 0px 0px 10px 2px rgba(0, 0, 255,1),inset 0px 0px 2px 4px rgba(0, 0, 255,1);
+        
+		
+    }
+    25%
+    {
+        box-shadow: 0px 0px 10px 2px rgba(255, 0, 0,1),inset 0px 0px 2px 4px rgba(255, 0, 0,1);
     }
 
     75% {
-        transform: rotate(0);
+        box-shadow: 0px 0px 10px 5px rgba(0, 255, 0,1),inset 0px 0px 2px 4px rgba(0, 255, 0,1);
     }
 
     to {
-        transform: rotate(0);
+        box-shadow: 0px 0px 10px 2px rgba(0, 0, 255,1),inset 0px 0px 2px 4px rgba(0, 0, 255,1);
     }
 }
