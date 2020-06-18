@@ -27,32 +27,28 @@
 
             <!------------------------------ Menu ---------------------------->
             <div id=onglets>
-                <a onclick="onClickMenu()" class="close2"></a>
                 <div class=titremenu>
-                <a class=logo href=#><img class=logomenu src="pictures/logo.png"  /></a>
-                <ul id="liens">
+                    <a onclick="onClickMenu()" id=close class="close"></a>
+                    <div class=closeframe></div>
+                    <ul id="liens">
 
-                     <li><a >Forum</a></li>
-                    <li><a >Collection</a></li>
-                    <li><a onclick="onglet1()">À propos</a></li>
-                    <li><a onclick="onglet2()">Communauté</a></li>
-                    <li><a onclick="onglet3()">Contenu exclusif</a></li>
+                        <li class=un><a  onclick="onglet2()">COMMUNAUTÉ</a></li>
+                        <li class=deux><a>COLLECTION</a></li>
+                        <li class=quatre><a>FORUM</a></li>
 
-                </ul>
-				
+
+                    </ul>
+                    <a class=logo1><img src="pictures/discord.svg" width=70px></a>
+                    <a class=logo2><img src="pictures/steam.svg" width=70px></a>
+                    <a class=logo3><img src="pictures/youtube.svg" width=70px></a>
+
+
                 </div>
-				
-				
-				<div class=containerMenu>
-				
-					<img class=logoReseauxSociaux src="pictures/youtube.svg" />
-					<img class=logoReseauxSociaux src="pictures/steam.svg"  />
-					<img class=logoReseauxSociaux src="pictures/discord.svg"  />
-				
-				
-				
-				</div>
-				
+
+
+
+
+
             </div>
             <div id=onglet>
                 <a onclick="onglet1()" class="close"></a>
@@ -76,7 +72,7 @@
                     scripts inédits, rendant l'immersion plus intense. Mais ce n'est pas tout, dans cette équipe, deux
                     membres maîtrisent le logiciel Hammer Editor ce qui nous permet aujourd'hui de mettre à la
                     disposition de nos joueurs, deux nouvelles maps jamais vus auparavant. </p>
-			</div>
+            </div>
         </div>
 
 
@@ -85,15 +81,18 @@
 
         <!------------------------------ Bouton Menu, A propos et se connecter ---------------------------->
         <div id="menu" onclick="onClickMenu()">
-            ☰</div>
+            ☰</div>            
+
+                <div id=blur>
+
         <a onclick="onglet1()" onmouseover=line1() onmouseout=line1() id=infoUn>À propos</a>
         <div id=borderline></div>
         <a onclick="onglet3()" onmouseover=line2() onmouseout=line2() id=infoDeux>Notre contenu</a>
         <div id=borderlinedeux></div>
 
-
+    </div>
         <!------------------------------ Logo et bouton au centre de l'ecran quand on arrive sur le site ---------------------------->
-        <div class="titre">
+        <div id=titre class="titre">
             <img class=logo2 src="pictures/logo2.png" width=40% />
 
 
@@ -101,13 +100,13 @@
             <div class=start>
 
                 <button href='#'>
-                    <div>C'EST PARTI !</div>
+                    <div>S'ENGAGER</div>
                 </button>
             </div>
         </div>
 
         <!------------------------------ arriere plan anime ---------------------------->
-        <div class="container">
+        <div class="container" id=container>
             <ul id="scene">
                 <li class="layer" data-depth=".01"><img src="pictures/bg2.png"></li>
                 <li class="layer" data-depth=".04"><img src="pictures/bg.png"></li>
@@ -139,7 +138,7 @@
         function
         buttonCommand() {
             alert("Les développeurs Olivier, Louka,  et Paul n'ont pas fini de développer cette partie du site internet.")
-            }
+        }
     </script>
 
 
