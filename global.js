@@ -22,30 +22,34 @@ function onClickMenu() {
 
     document.getElementById("onglets").classList.toggle("change");
     document.getElementById("onglets").classList.toggle("show");
-    document.getElementById("titre").classList.toggle("change");
     document.getElementById("bordure").classList.toggle("change");
+
+            document.getElementById("close").classList.toggle("change");
+
+blur();
+    
+}
+
+function blur(){
+        document.getElementById("titre").classList.toggle("change");
+        document.getElementById("menu").classList.toggle("change");
+
     document.getElementById("container").classList.toggle("change");
         document.getElementById("infoUn").classList.toggle("change");
         document.getElementById("infoDeux").classList.toggle("change");
-            document.getElementById("close").classList.toggle("change");
-
-
-    
-
 }
 
 
 
-
-
 function onglet1() {
-
+    blur()
     document.getElementById("onglet").classList.toggle("change");
 
     document.getElementById("bordure").classList.toggle("change");
 }
 
 function onglet2() {
+        blur()
 
     document.getElementById("ongletdeux").classList.toggle("change");
 
@@ -55,7 +59,7 @@ function onglet2() {
 
 
 function onglet3_2() {
-    document.getElementById("onglettrois").classList.toggle("change");
+    document.getElementById("onglet3").classList.toggle("change");
 
     document.getElementById("onglets").classList.toggle("change");
 }
@@ -71,8 +75,8 @@ function onglet1_2() {
 
 
 function onglet3() {
-
-    document.getElementById("onglettrois").classList.toggle("change");
+    blur()
+    document.getElementById("onglet3").classList.toggle("change");
 
     document.getElementById("bordure").classList.toggle("change");
 }

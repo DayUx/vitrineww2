@@ -189,7 +189,7 @@ body {
 }
 
 #container.change{
-    filter:blur(2px);
+    filter:blur(5px);
 }
 
 
@@ -307,7 +307,7 @@ a.logo2{
 
 
 #infoUn.change,#infoDeux.change {
-    filter: blur(2px);
+    filter: blur(5px);
 }
 
 
@@ -396,7 +396,7 @@ a.logo2{
 
 
 #titre.change{
-    filter:blur(2px);
+    filter:blur(5px);
 }
 
 
@@ -455,7 +455,9 @@ a.logo2{
     padding-left: 58px;
 }
 
-
+#menu.change {
+    filter:blur(5px);
+}
 
 
 
@@ -502,14 +504,15 @@ a.logo2{
 
 .close2 {
     position: absolute;
-    right: 32px;
-    top: 32px;
-    width: 32px;
-    height: 32px;
-    opacity: 0.5;
+    left: 0;
+    top: 0;
+    width: 37px;
+    height: 37px;
+    opacity: 1;
     transition: 0.5s all;
-    z-index: 1000;
-
+    z-index: 11111;
+    background: white;
+    border-radius: 1000px;
 }
 
 .close2:hover {
@@ -521,8 +524,9 @@ a.logo2{
 .close2:after {
     position: absolute;
     left: 15px;
+    top:4px;
     content: ' ';
-    height: 33px;
+    height: 25px;
     width: 3px;
     background-color: black;
     border: 2px solid black;
@@ -537,6 +541,76 @@ a.logo2{
 .close2:after {
     transform: rotate(-45deg);
 }
+
+
+
+
+.close3 {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 37px;
+    height: 37px;
+    opacity: 1;
+    transition: 0.5s all;
+    z-index: 11111;
+    background: white;
+    border-radius: 1000px;
+}
+
+.close3:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.close3:before,
+.close3:after {
+    position: absolute;
+    left: 15px;
+    top:4px;
+    content: ' ';
+    height: 25px;
+    width: 3px;
+    background-color: black;
+    border: 2px solid black;
+    border-radius: 20px;
+
+}
+
+.close3:before {
+    transform: rotate(45deg);
+}
+
+.close3:after {
+    transform: rotate(-45deg);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -655,22 +729,27 @@ a.logo2{
 
 
 #onglet {
+    clip-path: circle(0% at 0% 50%);
+
     background-color: #fff;
     background-size: 100%;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
+    width: 300px;
+    height: 400px;
     z-index: 1000;
     position: absolute;
-    left: -100%;
-    bottom: 0;
+    bottom: 50%;
     transition: 0.8s all;
+    border-bottom-right-radius: 10000px;
+    border-top-right-radius: 10000px;
+    color: black;
+    transform: translate(0,50%)
 
 }
 
 #onglet.change {
-    transform: translate(100%, 0%);
     opacity: 1;
+        clip-path: circle(100% at 0% 50%);
+
 
 }
 
@@ -679,33 +758,60 @@ h1 {
 
 }
 
-p {
-    margin: 100px 5% 0 5%;
-    font-size: 30px;
+#onglet p {
+    position: absolute;
+    left: 39%;
+    top:26%;
+    transform: translate(-50%,-25%);
+    font-size: 20px;
     text-align: justify;
+    width:230px;
 }
 
 
 
 
 
-#onglettrois {
+#onglet3 {
+    clip-path: circle(0% at 100% 50%);
+
     background-color: #fff;
-    width: 100%;
-    height: 100%;
-    bottom: 0;
+    background-size: 100%;
+    width: 400px;
+    height: 500px;
     z-index: 1000;
     position: absolute;
-    right: -100%;
+    bottom: 50%;
     transition: 0.8s all;
-    opacity: 0;
-    overflow: scroll;
+    border-bottom-left-radius: 10000px;
+    border-top-left-radius: 10000px;
+    color: black;
+    transform: translate(0,50%);
+        right:0;
 
 }
 
-#onglettrois.change {
-    transform: translate(-100%, 0%);
+#onglet3.change {
     opacity: 1;
+        clip-path: circle(110% at 100% 50%);
+
+
+}
+
+h1 {
+    font-size: 50px;
+
+}
+
+#onglet3 p {
+    right: -37%;
+    top: 39%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    font-size: 18px;
+    text-align: justify;
+    width:300px;
+    height: 280px;
 }
 
 
@@ -727,7 +833,6 @@ p {
 
 .start button {
     border: 2px solid #fff;
-    border-radius: 2px;
     color: #fff;
     font-size: 50px;
     font-weight: bold;
@@ -743,7 +848,7 @@ p {
 .start button:hover {
 
     background-color: #fff;
-    color: white;
+    color: #580000;
     cursor: pointer;
     box-shadow: inset 0px 0px 0px 100px #fff;
 
@@ -753,7 +858,7 @@ p {
 
 @media all and (max-width: 840px) {
     .start button {
-        margin-top: 100px;
+        margin-top: 300px;
         border: 2px solid #fff;
         border-radius: 2px;
         color: #fff;
