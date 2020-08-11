@@ -28,19 +28,18 @@
             <!------------------------------ Menu ---------------------------->
             <div id=onglets>
                 <div class=titremenu>
-                    <a onclick="onClickMenu()" id=close class="close"></a>
-                    <div class=closeframe></div>
+                    <div class=blurbackground></div>
                     <ul id="liens">
 
-                        <li class=un><a  onclick="onglet2()">COMMUNAUTÉ</a></li>
-                        <li class=deux><a>COLLECTION</a></li>
-                        <li class=quatre><a>FORUM</a></li>
+                        <li id=un><a onclick="onglet2()">COMMUNAUTÉ</a></li>
+                        <li id=deux><a>COLLECTION</a></li>
+                        <li id=quatre><a>FORUM</a></li>
 
 
                     </ul>
-                    <a class=logo1><img src="pictures/discord.svg" width=70px></a>
+                    <!--<a class=logo1><img src="pictures/discord.svg" width=70px></a>
                     <a class=logo2><img src="pictures/steam.svg" width=70px></a>
-                    <a class=logo3><img src="pictures/youtube.svg" width=70px></a>
+                    <a class=logo3><img src="pictures/youtube.svg" width=70px></a>-->
 
 
                 </div>
@@ -50,9 +49,13 @@
 
 
             </div>
+
+
+
+
             <div id=onglet>
-                <a onclick="onglet1()" class="close3"></a>
-                
+
+
                 <p>Normandy RP est une communauté réunissant des joueurs dans le domaine du Rôle Play. Nous sommes
                     surtout gérants du serveur La Bataille de Normandie sur Garry's Mod. Vous pouvez ainsi nous retrouver sur
                     le serveur La Bataille de Normandie V5.</p>
@@ -65,7 +68,7 @@
 
 
 
-            <div id=onglet3><a onclick="onglet3()" class="close2"></a>
+            <div id=onglet3>
                 <p>Nous avons la chance d'avoir avec nous une équipe de développeurs compétents, connaissant de nombreux
                     langages de programmation tels que le LUA, HTML, CSS, JS ... Ainsi nous proposons à nos joueurs des
                     scripts inédits, rendant l'immersion plus intense. Mais ce n'est pas tout, dans cette équipe, deux
@@ -79,17 +82,20 @@
 
 
         <!------------------------------ Bouton Menu, A propos et se connecter ---------------------------->
-        <div id="menu" onclick="onClickMenu()">
-            ☰</div>            
+        <div id="menu">
+            <div onmouseover=burgermenuhover() onmouseout=burgermenuhover() id=burger-menu onclick=onClickMenu()>
+                <div class=menu></div>
+            </div>
+        </div>
 
-                <div id=blur>
+        <div id=blur>
 
-        <a onclick="onglet1()" onmouseover=line1() onmouseout=line1() id=infoUn>À propos</a>
-        <div id=borderline></div>
-        <a onclick="onglet3()" onmouseover=line2() onmouseout=line2() id=infoDeux>Notre contenu</a>
-        <div id=borderlinedeux></div>
+            <a onmouseover=line1() onmouseout=line1() id=infoUn>À propos</a>
+            <div id=borderline></div>
+            <a onmouseover=line2() onmouseout=line2() id=infoDeux>Notre contenu</a>
+            <div id=borderlinedeux></div>
 
-    </div>
+        </div>
         <!------------------------------ Logo et bouton au centre de l'ecran quand on arrive sur le site ---------------------------->
         <div id=titre class="titre">
             <img class=logo2 src="pictures/logo2.png" width=40% />

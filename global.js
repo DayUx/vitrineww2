@@ -18,25 +18,26 @@ function transition() {
 var a = 1;
 
 function onClickMenu() {
-
+    document.getElementById("burger-menu").classList.toggle("change");
 
     document.getElementById("onglets").classList.toggle("change");
     document.getElementById("onglets").classList.toggle("show");
-    document.getElementById("bordure").classList.toggle("change");
+    document.getElementById("bordure").classList.toggle("changedeux");
 
-            document.getElementById("close").classList.toggle("change");
+    document.getElementById("liens").classList.toggle("change");
 
-blur();
+
     
+
 }
 
-function blur(){
-        document.getElementById("titre").classList.toggle("change");
+
+function burgermenuhover(){
+    
         document.getElementById("menu").classList.toggle("change");
 
-    document.getElementById("container").classList.toggle("change");
-        document.getElementById("infoUn").classList.toggle("change");
-        document.getElementById("infoDeux").classList.toggle("change");
+    
+    
 }
 
 
@@ -49,7 +50,7 @@ function onglet1() {
 }
 
 function onglet2() {
-        blur()
+    blur()
 
     document.getElementById("ongletdeux").classList.toggle("change");
 
@@ -82,12 +83,19 @@ function onglet3() {
 }
 
 function line1() {
+        document.getElementById("bordure").classList.toggle("change");
+
+    document.getElementById("onglet").classList.toggle("change");
 
     document.getElementById("borderline").classList.toggle("change");
 
 }
 
 function line2() {
+    document.getElementById("bordure").classList.toggle("change");
+    document.getElementById("onglet3").classList.toggle("change");
+
+    
 
     document.getElementById("borderlinedeux").classList.toggle("change");
 

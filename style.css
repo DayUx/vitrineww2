@@ -82,28 +82,42 @@ body {
 
 
 #onglets {
-    clip-path: circle(0% at 100% 0%);
+    
 
-    z-index: 11100;
+    z-index: 11111;
 
     position: absolute;
-    background: #fff;
-
+    background: transparent;
+    top:0;
     right: 0;
-    width: 400px;
-    height: 400px;
+    width: 280px;
+    height: 340px;
     display: flex;
     flex-direction: column;
     align-items: right;
     justify-content: right;
     transition: 0.5s all;
     color: #000;
+    opacity: 0;
+    
 
+
+}
+.blurbackground{
+    position: absolute;
+    background: #fff;
+    width:110%;
+    height:110%;
+    margin-top: -10%;
+    margin-right: -10%;
+    filter: blur(1px);
+    border-bottom-left-radius:5px
 }
 
 
 #onglets.change {
-    clip-path: circle(100% at 100% 0%);
+    
+    opacity: 1;
 
     position: absolute;
 
@@ -164,13 +178,95 @@ body {
     color: #fff;
     border-right: 3px solid #fff;
     border-top: 3px solid #fff;
-    padding-left: 12px;
-    padding-bottom: 0;
-    padding-right: 20px;
-    padding-top: 10px;
+    height: 40px;
+    width: 40px;
+    z-index: 111111111111111111111111;
 
 }
 
+
+
+#menu.change {
+    cursor: pointer;
+    padding-bottom: 50px;
+    padding-left: 50px;
+}
+
+
+
+.menu {
+    position: absolute;
+    top: 20px;
+    height: 4px;
+    width: 25px;
+    background-color: white;
+    transition: 1s all;
+    right: 15px;
+
+}
+
+
+
+
+.menu::before {
+    position: absolute;
+    top: 10px;
+    content: ' ';
+    height: 4px;
+    width: 25px;
+    background-color: white;
+    transition: 1s all;
+        right: 0px;
+
+
+
+}
+
+.menu::after {
+
+    position: absolute;
+    bottom: 10px;
+    content: ' ';
+    height: 4px;
+    width: 25px;
+    background-color: white;
+    transition: 1s all;
+        right: 0px;
+
+
+    
+}
+
+
+#burger-menu.change .menu::before{
+    transform: rotate(90deg);
+    top:0;
+    background: #580000;
+}
+#burger-menu.change .menu::after{
+    transform: rotate(360deg);
+    bottom:0;
+background: #580000;
+
+}
+
+
+#burger-menu.change .menu{
+        transform: rotate(-45deg);
+background: #580000;
+}
+
+
+
+#burger-menu{
+    top:19px;
+    width: 33px;
+    height: 30px;
+    right: 0;
+    position: absolute;
+    transform: translate(0, -50%);
+
+}
 
 
 
@@ -184,96 +280,99 @@ body {
 }
 
 
-#container{
+#container {
     transition: 1s all;
 }
 
-#container.change{
-    filter:blur(5px);
+#container.change {
+    filter: blur(5px);
 }
 
 
 
 
 #liens {
-    
-    margin-top: 20px;
+    color: #580000;
+    margin-top: 50px;
     margin-right: 20px;
-
-    text-align: right;
+    
+    text-align: center;
     text-decoration: none;
     list-style-type: none;
     position: absolute;
     right: 0;
-    font-size:30px;
+    font-size: 30px;
     font-weight: 700;
     z-index: 0;
 }
 
 
 #liens li {
-    padding:5px;
-    margin-bottom: 40px;
-    transition: 0.5s all;
+    padding: 10px;
+    margin-bottom: -65px;
+    border: 3px solid #580000;
+    color: #580000;
+    font-weight: bold;
+    transition: 0.9s all;
+    background-color: #fff;
+    box-shadow: inset 0px 0px 0px 0px #580000;
 }
 
 
-li.un{
-    margin-right: 40px;
+
+#liens.change li{
+        margin-bottom: 40px;
+
 }
 
 
- li.un:hover {
-     color:#580000;
-    margin-right: 45px;
+
+#liens li:hover {
+
+    color: #fff;
     cursor: pointer;
-    
-
-}
- li.deux:hover {
-     color:#580000;
-    margin-right: 5px;
-    cursor: pointer;
-    
-
-}
- li.quatre:hover {
-     color:#580000;
-    margin-right: 5px;
-    cursor: pointer;
-    
+    box-shadow: inset 0px 0px 0px 100px #580000;
 
 }
 
 
-.logo1{
+
+
+
+
+
+
+
+.logo1 {
     position: absolute;
     left: 20px;
     top: 14px;
     transition: 0.5s all;
 }
 
-a.logo2{
+a.logo2 {
     position: absolute;
     left: 120px;
     bottom: 114px;
-        transition: 0.5s all;
+    transition: 0.5s all;
 
 }
 
-.logo3{
+.logo3 {
     position: absolute;
     right: 20px;
     bottom: 14px;
-        transition: 0.5s all;
+    transition: 0.5s all;
 
 }
 
 
-.logo1:hover,a.logo2:hover,.logo3:hover{
+.logo1:hover,
+a.logo2:hover,
+.logo3:hover {
     transform: scale(0.8);
     cursor: pointer;
-    
+
 }
 
 
@@ -306,7 +405,8 @@ a.logo2{
 }
 
 
-#infoUn.change,#infoDeux.change {
+#infoUn.change,
+#infoDeux.change {
     filter: blur(5px);
 }
 
@@ -395,22 +495,9 @@ a.logo2{
 
 
 
-#titre.change{
-    filter:blur(5px);
-}
 
 
 
-.closeframe{
-    top: 0;
-    right: 0;
-    position: absolute;
-    width: 75%;
-    height: 75%;
-    z-index: 0;
-    background: rgba(0,0,0,0.04);
-    border-bottom-left-radius: 1000px;
-}
 
 
 
@@ -435,29 +522,24 @@ a.logo2{
     border: 1px solid white;
     z-index: 1;
     transition: 0.8s all;
+    
 }
 
 
 
 #bordure.change {
-    
+
     z-index: 1000;
 }
-
-
-
-
-
-#menu:hover {
-
-    cursor: pointer;
-    padding-bottom: 50px;
-    padding-left: 58px;
+#bordure.changedeux {
+    z-index: 1100;
 }
 
-#menu.change {
-    filter:blur(5px);
-}
+
+
+
+
+
 
 
 
@@ -485,10 +567,10 @@ a.logo2{
     position: absolute;
     left: 15px;
     content: ' ';
-    height: 33px;
-    width: 3px;
+    height: 35px;
+    width: 4px;
     background-color: black;
-    border: 2px solid black;
+
     border-radius: 20px;
 
 }
@@ -524,7 +606,7 @@ a.logo2{
 .close2:after {
     position: absolute;
     left: 15px;
-    top:4px;
+    top: 4px;
     content: ' ';
     height: 25px;
     width: 3px;
@@ -567,7 +649,7 @@ a.logo2{
 .close3:after {
     position: absolute;
     left: 15px;
-    top:4px;
+    top: 4px;
     content: ' ';
     height: 25px;
     width: 3px;
@@ -641,7 +723,7 @@ a.logo2{
     position: absolute;
     color: #cdcdcd;
 
-    z-index: 3;
+    z-index: 1;
     transition: 1s all;
 }
 
@@ -728,30 +810,55 @@ a.logo2{
 
 
 
-#onglet {
-    clip-path: circle(0% at 0% 50%);
 
-    background-color: #fff;
-    background-size: 100%;
-    width: 300px;
-    height: 400px;
-    z-index: 1000;
-    position: absolute;
-    bottom: 50%;
-    transition: 0.8s all;
-    border-bottom-right-radius: 10000px;
-    border-top-right-radius: 10000px;
-    color: black;
-    transform: translate(0,50%)
 
+#blur{
+    z-index:1000;
 }
+
+#onglet {
+    margin-top: calc(50vh - 20px);
+    margin-left: 100px;
+    position: relative;
+    background: #ffffff;
+    font-family: Arial;
+    font-size: 20px;
+    text-align: center;
+    width: 50%;
+    border-radius: 10px;
+    padding: 0px;
+    color: black;
+    opacity: 0;
+    transition: 1s all;
+    transform: translate(0,-50%);
+    visibility: hidden;
+    z-index: 10000;
+}
+#onglet:after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 0;
+    z-index: 1;
+    border-style: solid;
+    border-color: transparent #ffffff;
+    border-width: 13px 20px 13px 0;
+    top: 50%;
+    left: -20px;
+    margin-top: -13px;
+}
+
+
+
 
 #onglet.change {
+    visibility: visible;
     opacity: 1;
-        clip-path: circle(100% at 0% 50%);
-
-
 }
+
+
+
+
 
 h1 {
     font-size: 50px;
@@ -759,70 +866,105 @@ h1 {
 }
 
 #onglet p {
-    position: absolute;
-    left: 39%;
-    top:26%;
-    transform: translate(-50%,-25%);
+    left: 0;
+    top: 0%;
+    margin: 0;
     font-size: 20px;
     text-align: justify;
-    width:230px;
+    padding: 10px;
 }
 
+
+
+
+
+
+
+#onglet3.change {
+    opacity: 1;
+    visibility: visible;
+
+
+}
 
 
 
 
 #onglet3 {
-    clip-path: circle(0% at 100% 50%);
-
-    background-color: #fff;
-    background-size: 100%;
-    width: 400px;
-    height: 500px;
-    z-index: 1000;
     position: absolute;
-    bottom: 50%;
-    transition: 0.8s all;
-    border-bottom-left-radius: 10000px;
-    border-top-left-radius: 10000px;
-    color: black;
-    transform: translate(0,50%);
-        right:0;
+    background: #ffffff;
+    color: #000;
+    font-family: Arial;
+    font-size: 20px;
+    text-align: center;
+    width: 50%;
+    border-radius: 10px;
+    padding: 0px;
+    top:50%;
+    transform: translate(0,-50%);
+    right: 140px;
+    transition: 1s all;
+    visibility: hidden;
+    opacity: 0;
 
 }
-
-#onglet3.change {
-    opacity: 1;
-        clip-path: circle(110% at 100% 50%);
-
-
+#onglet3:after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 0;
+    z-index: 1;
+    border-style: solid;
+    border-color: transparent #ffffff;
+    border-width: 13px 0 13px 20px;
+    top: 50%;
+    right: -20px;
+    margin-top: -13px;
 }
+
+#onglet3 p {
+    left: 0;
+    top: 0%;
+    margin: 0;
+    font-size: 20px;
+    text-align: justify;
+    padding: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 h1 {
     font-size: 50px;
 
 }
 
-#onglet3 p {
-    right: -37%;
-    top: 39%;
-    position: absolute;
-    transform: translate(-50%,-50%);
-    font-size: 18px;
-    text-align: justify;
-    width:300px;
-    height: 280px;
+
+
+
+
+
+@media all and (max-width: 840px) {}
+
+
+
+#community {
+    width: 100px;
+    height: 100px;
+    background: white;
+    clip-path: url(#myClip);
 }
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -847,7 +989,6 @@ h1 {
 
 .start button:hover {
 
-    background-color: #fff;
     color: #580000;
     cursor: pointer;
     box-shadow: inset 0px 0px 0px 100px #fff;
@@ -858,7 +999,7 @@ h1 {
 
 @media all and (max-width: 840px) {
     .start button {
-        margin-top: 300px;
+        margin-top: 100px;
         border: 2px solid #fff;
         border-radius: 2px;
         color: #fff;
@@ -883,107 +1024,12 @@ h1 {
 
 
 
-
-
-
-/*_____Fond vidéo_____*/
-
-
-
-
-
-
-
-/*__________________Section2___________________*/
-
-
-
-
-
-/*------------------------------------------------------*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*------------------------------------Flip the phone----------------------------*/
-
-
-@media all and (min-height: 301px) {
-    .FlipPhone {
-        display: none;
-    }
-}
-
-
-
 @media all and (max-height: 300px) {
     body {
         overflow-y: hidden;
     }
 
-    .FlipPhone {
 
-        width: 100%;
-        height: 100%;
-        overflow: visible;
-        z-index: 1000;
-        margin: 0 auto;
-        position: absolute;
-        top: 0;
-        left: 0;
-        bottom: 0;
-        right: 0;
-    }
-
-    .FlipPhone h1 {
-        color: #dedede;
-        text-align: center;
-        margin: auto;
-        position: absolute;
-        top: 30%;
-        left: 0;
-        bottom: 0;
-        right: 0;
-
-
-    }
-
-    .Phone {
-        padding: 0 5% 0 5%;
-        animation-name: rotate;
-        animation-duration: 2s;
-        animation-iteration-count: infinite;
-        animation-timing-function: ease-in-out;
-        margin: auto;
-        position: absolute;
-        top: 50%;
-        left: 0;
-        bottom: 0;
-        right: 0;
-
-
-
-    }
 
 }
 
@@ -1012,8 +1058,3 @@ h1 {
         box-shadow: 0px 0px 10px 2px rgba(0, 0, 255, 1), inset 0px 0px 2px 4px rgba(0, 0, 255, 1);
     }
 }
-
-
-
-
-
