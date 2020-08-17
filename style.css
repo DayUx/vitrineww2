@@ -7,11 +7,7 @@ body {
     width: 100%;
     max-height: 300%;
     overflow: hidden;
-
     text-align: center;
-
-
-
 }
 
 ::-webkit-scrollbar {
@@ -19,154 +15,15 @@ body {
 }
 
 body {
-
     position: relative;
 }
-
 
 @font-face {
     font-family: "Courrier";
     src: url("font/cour.ttf");
 }
 
-.containerMenu {
-
-    display: inline-flex;
-    flex-direction: row;
-    justify-content: space-around;
-    width: 100%;
-    height: 10%;
-}
-
-.logoReseauxSociaux {
-    height: 100%;
-
-    border-radius: 100000px;
-    -webkit-transform: scale(1);
-    transform: scale(1);
-    -webkit-transition: .3s ease-in-out;
-    transition: .3s ease-in-out;
-
-}
-
-.logoReseauxSociaux:hover {
-    -webkit-transform: scale(1.15);
-    transform: scale(1.15);
-    cursor: pointer;
-
-}
-
-
-
-.containerMenu {
-    -webkit-transition: .3s all;
-    transition: .3s all;
-}
-
-.containerMenu:hover {
-    -webkit-transform: scale(1.02);
-    transform: scale(1.02);
-
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-#onglets {
-    
-
-    z-index: 11111;
-
-    position: absolute;
-    background: transparent;
-    top:0;
-    right: 0;
-    width: 280px;
-    height: 340px;
-    display: flex;
-    flex-direction: column;
-    align-items: right;
-    justify-content: right;
-    transition: 0.5s all;
-    color: #000;
-    opacity: 0;
-    
-
-
-}
-.blurbackground{
-    position: absolute;
-    background: #fff;
-    width:110%;
-    height:110%;
-    margin-top: -10%;
-    margin-right: -10%;
-    filter: blur(1px);
-    border-bottom-left-radius:5px
-}
-
-
-#onglets.change {
-    
-    opacity: 1;
-
-    position: absolute;
-
-
-
-}
-
-.logomenu {
-    height: 20%;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*_____Menu Normal_____*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*_____Menu_____*/
-
-
+/*------------------------------Menu déroulant----------------------*/
 
 #menu {
     font-size: 40px;
@@ -181,18 +38,13 @@ body {
     height: 40px;
     width: 40px;
     z-index: 111111111111111111111111;
-
 }
-
-
 
 #menu.change {
     cursor: pointer;
     padding-bottom: 50px;
     padding-left: 50px;
 }
-
-
 
 .menu {
     position: absolute;
@@ -202,11 +54,7 @@ body {
     background-color: white;
     transition: 1s all;
     right: 15px;
-
 }
-
-
-
 
 .menu::before {
     position: absolute;
@@ -216,14 +64,10 @@ body {
     width: 25px;
     background-color: white;
     transition: 1s all;
-        right: 0px;
-
-
-
+    right: 0px;
 }
 
 .menu::after {
-
     position: absolute;
     bottom: 10px;
     content: ' ';
@@ -231,71 +75,46 @@ body {
     width: 25px;
     background-color: white;
     transition: 1s all;
-        right: 0px;
-
-
-    
+    right: 0px;
 }
 
-
-#burger-menu.change .menu::before{
+#burger-menu.change .menu::before {
     transform: rotate(90deg);
-    top:0;
+    top: 0;
     background: #580000;
 }
-#burger-menu.change .menu::after{
+
+#burger-menu.change .menu::after {
     transform: rotate(360deg);
-    bottom:0;
-background: #580000;
-
+    bottom: 0;
+    background: #580000;
 }
 
-
-#burger-menu.change .menu{
-        transform: rotate(-45deg);
-background: #580000;
+#burger-menu.change .menu {
+    transform: rotate(-45deg);
+    background: #580000;
 }
 
-
-
-#burger-menu{
-    top:19px;
+#burger-menu {
+    top: 19px;
     width: 33px;
     height: 30px;
     right: 0;
     position: absolute;
     transform: translate(0, -50%);
-
 }
-
-
 
 .bgmenu {
     width: 100%;
     bottom: 0;
     left: 0;
     position: absolute;
-
-
 }
-
-
-#container {
-    transition: 1s all;
-}
-
-#container.change {
-    filter: blur(5px);
-}
-
-
-
 
 #liens {
     color: #580000;
     margin-top: 50px;
     margin-right: 20px;
-    
     text-align: center;
     text-decoration: none;
     list-style-type: none;
@@ -305,7 +124,6 @@ background: #580000;
     font-weight: 700;
     z-index: 0;
 }
-
 
 #liens li {
     padding: 10px;
@@ -318,76 +136,63 @@ background: #580000;
     box-shadow: inset 0px 0px 0px 0px #580000;
 }
 
-
-
-#liens.change li{
-        margin-bottom: 40px;
-
+#liens.change li {
+    margin-bottom: 40px;
 }
 
-
-
 #liens li:hover {
-
     color: #fff;
     cursor: pointer;
     box-shadow: inset 0px 0px 0px 100px #580000;
-
 }
 
-
-
-
-
-
-
-
-
-.logo1 {
+#onglets {
+    z-index: 11111;
     position: absolute;
-    left: 20px;
-    top: 14px;
+    background: transparent;
+    top: 0;
+    right: 0;
+    width: 280px;
+    height: 340px;
+    display: flex;
+    flex-direction: column;
+    align-items: right;
+    justify-content: right;
     transition: 0.5s all;
+    color: #000;
+    opacity: 0;
 }
 
-a.logo2 {
+.blurbackground {
     position: absolute;
-    left: 120px;
-    bottom: 114px;
-    transition: 0.5s all;
-
+    background: #fff;
+    width: 110%;
+    height: 110%;
+    margin-top: -10%;
+    margin-right: -10%;
+    filter: blur(1px);
+    border-bottom-left-radius: 5px
 }
 
-.logo3 {
+#onglets.change {
+    opacity: 1;
     position: absolute;
-    right: 20px;
-    bottom: 14px;
-    transition: 0.5s all;
-
 }
 
+/*--------------------Boutons notre contenu et à propos--------------*/
 
-.logo1:hover,
-a.logo2:hover,
-.logo3:hover {
-    transform: scale(0.8);
-    cursor: pointer;
-
+#blur {
+    z-index: 1000;
+    visibility: visible;
+    transition: 1s all;
+    opacity: 1;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+#blur.change {
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+}
 
 #infoUn {
     color: white;
@@ -401,23 +206,12 @@ a.logo2:hover,
     font-family: Nunito Sans;
     font-weight: bold;
     transition: 0.8s all;
-
 }
-
-
-#infoUn.change,
-#infoDeux.change {
-    filter: blur(5px);
-}
-
-
-
 
 #infoUn:hover {
     opacity: 1;
     cursor: pointer;
     color: white;
-
 }
 
 #borderline {
@@ -430,19 +224,11 @@ a.logo2:hover,
     width: 3px;
     background-color: white;
     transition: 0.8s all;
-
 }
 
 #borderline.change {
-
-
     height: 100px;
-
 }
-
-
-
-
 
 #infoDeux {
     opacity: 0.8;
@@ -456,14 +242,11 @@ a.logo2:hover,
     font-family: Nunito Sans;
     font-weight: bold;
     transition: 0.8s all;
-
 }
 
 #infoDeux:hover {
     opacity: 1;
     cursor: pointer;
-
-
 }
 
 #borderlinedeux {
@@ -476,359 +259,13 @@ a.logo2:hover,
     width: 3px;
     background-color: white;
     transition: 0.8s all;
-
 }
 
 #borderlinedeux.change {
-
-
     height: 100px;
-
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.logomenu {
-    position: relative;
-    margin-top: 1%;
-}
-
-#bordure {
-    position: absolute;
-    background: transparent;
-    overflow: hidden;
-    top: 20px;
-    left: 20px;
-    bottom: 20px;
-    right: 20px;
-    border: 1px solid white;
-    z-index: 1;
-    transition: 0.8s all;
-    
-}
-
-
-
-#bordure.change {
-
-    z-index: 1000;
-}
-#bordure.changedeux {
-    z-index: 1100;
-
-}
-
-
-
-
-
-
-
-
-
-
-
-.close {
-    position: absolute;
-    right: 27px;
-    top: 22px;
-    width: 32px;
-    height: 32px;
-    opacity: 0.8;
-    transition: 0.5s all;
-    z-index: 11111;
-
-}
-
-.close:hover {
-    opacity: 0.8;
-    cursor: pointer;
-}
-
-.close:before,
-.close:after {
-    position: absolute;
-    left: 15px;
-    content: ' ';
-    height: 35px;
-    width: 4px;
-    background-color: black;
-
-    border-radius: 20px;
-
-}
-
-.close:before {
-    transform: rotate(45deg);
-}
-
-.close:after {
-    transform: rotate(-45deg);
-}
-
-
-.close2 {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 37px;
-    height: 37px;
-    opacity: 1;
-    transition: 0.5s all;
-    z-index: 11111;
-    background: white;
-    border-radius: 1000px;
-}
-
-.close2:hover {
-    opacity: 0.8;
-    cursor: pointer;
-}
-
-.close2:before,
-.close2:after {
-    position: absolute;
-    left: 15px;
-    top: 4px;
-    content: ' ';
-    height: 25px;
-    width: 3px;
-    background-color: black;
-    border: 2px solid black;
-    border-radius: 20px;
-
-}
-
-.close2:before {
-    transform: rotate(45deg);
-}
-
-.close2:after {
-    transform: rotate(-45deg);
-}
-
-
-
-
-.close3 {
-    position: absolute;
-    right: 0;
-    top: 0;
-    width: 37px;
-    height: 37px;
-    opacity: 1;
-    transition: 0.5s all;
-    z-index: 11111;
-    background: white;
-    border-radius: 1000px;
-}
-
-.close3:hover {
-    opacity: 0.8;
-    cursor: pointer;
-}
-
-.close3:before,
-.close3:after {
-    position: absolute;
-    left: 15px;
-    top: 4px;
-    content: ' ';
-    height: 25px;
-    width: 3px;
-    background-color: black;
-    border: 2px solid black;
-    border-radius: 20px;
-
-}
-
-.close3:before {
-    transform: rotate(45deg);
-}
-
-.close3:after {
-    transform: rotate(-45deg);
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*__________________Section___________________*/
-
-
-
-
-
-
-
-
-.section {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: #424242;
-
-}
-
-.titre {
-
-    width: 100%;
-    position: absolute;
-    color: #cdcdcd;
-
-    z-index: 1;
-    transition: 1s all;
-}
-
-.titre .logo2 {
-
-    margin-bottom: 10%;
-    top: 0;
-
-}
-
-.titremenu {
-    height: 100%;
-    width: 100%;
-}
-
-
-#titre.change{
-    filter:blur(5px)    
-}
-
-
-.start2 {
-    width: 100%;
-    position: relative;
-    margin-left: 50%;
-
-}
-
-.start2 button {
-    transform: translate(-50%);
-    border: 2px solid white;
-    border-radius: 2px;
-    color: white;
-    font-size: 50px;
-    font-weight: bold;
-    padding: 20px;
-    transition: 0.9s all;
-    background-color: transparent;
-    box-shadow: inset 0px 0px 0px 0px white;
-
-}
-
-
-
-.start2 button:hover {
-
-
-    color: #fff;
-    cursor: pointer;
-    box-shadow: inset 0px 0px 0px 100px white;
-
-}
-
-
-
-
-
-
-
-.txt_sect2_2 {
-    text-align: left;
-    font-size: 20px;
-
-    margin-top: 2%;
-    margin-bottom: 2%;
-    background-color: rgba(0, 0, 0, 0.2);
-    padding: 1%;
-
-    overflow: none;
-    z-index: 3;
-    position: relative;
-}
-
-
-
-
-
-/*_____Bouton_____*/
-
-
-
-
-
-
-
-
-
-
-
-
-#blur{
-    z-index:1000;
-        visibility: visible;
-    transition: 1s all;
-    opacity: 1;
-
-
-}
-#blur.change{
-        z-index:1000;
-opacity: 0;
-    
-    visibility: hidden;
-}
+/*------------------------------Onglet à propos--------------------------*/
 
 #onglet {
     margin-top: calc(50vh - 20px);
@@ -845,10 +282,11 @@ opacity: 0;
     color: black;
     opacity: 0;
     transition: 1s all;
-    transform: translate(0,-50%);
+    transform: translate(0, -50%);
     visibility: hidden;
     z-index: 10000;
 }
+
 #onglet:after {
     content: '';
     position: absolute;
@@ -863,21 +301,9 @@ opacity: 0;
     margin-top: -13px;
 }
 
-
-
-
 #onglet.change {
     visibility: visible;
     opacity: 1;
-}
-
-
-
-
-
-h1 {
-    font-size: 50px;
-
 }
 
 #onglet p {
@@ -889,21 +315,12 @@ h1 {
     padding: 10px;
 }
 
-
-
-
-
-
+/*------------------------------Onglet notre contenu--------------------------*/
 
 #onglet3.change {
     opacity: 1;
     visibility: visible;
-
-
 }
-
-
-
 
 #onglet3 {
     position: absolute;
@@ -913,17 +330,17 @@ h1 {
     font-size: 20px;
     text-align: center;
     max-width: 70%;
-    max-height:90%;
+    max-height: 90%;
     border-radius: 10px;
     padding: 0px;
-    top:50%;
-    transform: translate(0,-50%);
+    top: 50%;
+    transform: translate(0, -50%);
     right: 140px;
     transition: 1s all;
     visibility: hidden;
     opacity: 0;
-
 }
+
 #onglet3:after {
     content: '';
     position: absolute;
@@ -947,47 +364,32 @@ h1 {
     padding: 10px;
 }
 
+/*--------------------------BOUTON S'ENGAGER ET LOGO---------------------------------*/
 
+.titre {
+    width: 100%;
+    position: absolute;
+    color: #cdcdcd;
+    z-index: 1;
+    transition: 1s all;
+}
 
+.titre .logo2 {
+    margin-bottom: 10%;
+    top: 0;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-h1 {
-    font-size: 50px;
-
+.titremenu {
+    height: 100%;
+    width: 100%;
 }
 
 
-
-
-
-
-@media all and (max-width: 840px) {}
-
-
-
-#community {
-    width: 100px;
-    height: 100px;
-    background: white;
-    clip-path: url(#myClip);
+#titre.change {
+    filter: blur(5px)
 }
 
-
-
-
-
-
-
+/*-----------------------BOUTON S'ENGAGER-------------------------*/
 
 .start button {
     border: 2px solid #fff;
@@ -1001,8 +403,6 @@ h1 {
 
 }
 
-
-
 .start button:hover {
 
     color: #580000;
@@ -1010,8 +410,6 @@ h1 {
     box-shadow: inset 0px 0px 0px 100px #fff;
 
 }
-
-
 
 @media all and (max-width: 840px) {
     .start button {
@@ -1029,48 +427,52 @@ h1 {
         margin-left: 25px;
     }
 
-
     .titre .logo2 {
-
         width: 75%;
     }
 }
 
 
+/*------------------------------Bordel-----------------------------------------*/
 
+h1 {
+    font-size: 50px;
+}
+
+.section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #424242;
+}
+
+#bordure {
+    position: absolute;
+    background: transparent;
+    overflow: hidden;
+    top: 20px;
+    left: 20px;
+    bottom: 20px;
+    right: 20px;
+    border: 1px solid white;
+    z-index: 1;
+    transition: 0.8s all;
+}
+
+#bordure.change {
+    z-index: 1000;
+}
+
+#bordure.changedeux {
+    z-index: 1100;
+}
 
 
 @media all and (max-height: 300px) {
     body {
         overflow-y: hidden;
-    }
-
-
-
-}
-
-@media all and (min-height: 420px) {
-    .FlipPhone {
-        display: none;
-    }
-}
-
-@keyframes ring {
-    from {
-        box-shadow: 0px 0px 10px 2px rgba(0, 0, 255, 1), inset 0px 0px 2px 4px rgba(0, 0, 255, 1);
-
-
-    }
-
-    25% {
-        box-shadow: 0px 0px 10px 2px rgba(255, 0, 0, 1), inset 0px 0px 2px 4px rgba(255, 0, 0, 1);
-    }
-
-    75% {
-        box-shadow: 0px 0px 10px 5px rgba(0, 255, 0, 1), inset 0px 0px 2px 4px rgba(0, 255, 0, 1);
-    }
-
-    to {
-        box-shadow: 0px 0px 10px 2px rgba(0, 0, 255, 1), inset 0px 0px 2px 4px rgba(0, 0, 255, 1);
     }
 }
