@@ -23,6 +23,9 @@ function onClickMenu() {
     document.getElementById("onglets").classList.toggle("change");
     document.getElementById("onglets").classList.toggle("show");
     document.getElementById("bordure").classList.toggle("changedeux");
+    document.getElementById("blur").classList.toggle("change")
+    document.getElementById("titre").classList.toggle("change")
+
 
     document.getElementById("liens").classList.toggle("change");
 
