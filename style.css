@@ -1,0 +1,311 @@
+html {
+    height: 100vh;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+body {
+    position: relative;
+    min-height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    color: #fff;
+
+    background-image: linear-gradient(to bottom, rgba(49, 50, 63, 0.3) 0%, rgba(49, 50, 63, 0.3) 0%), url(images/bgfix.png);
+    background-color: #222f38;
+
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+}
+
+
+body:after {
+    background-image: url(images/noise.png);
+    content: " ";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 500;
+    pointer-events: none;
+    opacity: 0.7;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: space-between;
+    max-width: 800px;
+    min-height: 80px;
+    padding: 0 20px;
+    margin: auto;
+    
+    padding: 10px 0;
+}
+
+.pagecontent h1 {
+    font-size: 22px;
+    text-align: justify;
+    width: 500px;
+        opacity: 0.8;
+
+}
+
+.pagecontent {
+    width: 100%;
+    background-size: cover;
+    justify-content: space-evenly;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    min-height:  calc(50vh - 45px);
+    
+}
+
+.pagecontent button {
+    outline-style: none;
+    float: left;
+    text-align: left;
+    color: #ededed;    
+    border: 0.3vw solid #ededed;
+    transition: 0.4s all;
+    background: transparent;
+    font-size: 28px;
+    padding: 20px;
+    border-radius: 1px;
+    box-shadow: inset 0 0 0 0 #ededed;
+    opacity: 0.8;
+    margin-top: 50px
+}
+
+.pagecontent button:hover {
+    cursor: pointer;
+    box-shadow: inset 0 -100px 0 0 #ededed;
+    color: rgba(39, 54, 63, 1);    
+}
+
+.logo {
+    margin-left: 20px;
+    width: 250px;
+    transition: all 0.2s ease-out;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+}
+
+
+
+
+header {
+    background: rgba(39, 54, 63, 0.95);
+    border-bottom: solid 1px rgba(255, 255, 255, 0.1);
+
+}
+
+
+
+.page-content {
+    width: 100%;
+    min-height:calc(100vh - 200px);
+    background: rgba(39, 54, 63, 0.95);
+    display: flex;
+    padding: 50px 0;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.first-page{
+    height: 50%;
+    width: 800px;
+    position: relative;
+    
+}
+
+.first-page-text{
+    text-align: justify;
+    font-size: 20px;
+}
+.first-page-image{
+    background: url(images/logo_lbdnsamall.png);
+    background-size: contain;
+    height: 100%;
+    width: 50%;
+}
+
+
+nav ol {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 400px;
+
+    padding: 0;
+    
+
+    list-style-type: none;
+    font-size: 16px;
+}
+nav ol li{
+    margin-left:15px; 
+}
+
+
+
+
+div.menu a {
+    font-weight: 1000;
+    font-size: 44px;
+    color: #ededed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+div.menu a img{
+    height: 70px;
+}
+
+nav ol li a {
+    font-weight: 500;
+
+    text-decoration: none;
+    opacity: 0.5;
+    color: #fff;
+    transition: 0.1s all;
+
+}
+
+nav ol li a:hover {
+    opacity: 1;
+}
+
+
+@media screen and (max-width: 849px) {
+    nav {
+        flex-direction: column;
+    }
+
+    footer img {
+        width: 47vw;
+    }
+
+    .devblog-container {
+        width: 85vw;
+        margin: 50px 0;
+
+    }
+    .logo{
+        display: none;
+    }
+    .pagecontent {
+        justify-content: center;
+    }
+
+}
+
+@media screen and (min-width: 850px) {
+    .devblog-container {
+        width: 600px;
+        margin: 50px 0;
+
+    }
+}
+
+footer {
+    background: #ededed;
+    display: flex;
+    justify-content: center;
+    background:  rgba(39, 54, 63, 0.95);
+    border-top: solid 1px rgba(255, 255, 255, 0.1);
+
+
+}
+
+footer img {
+    max-width: 400px;
+}
+
+.devblog-container {
+    overflow: hidden;
+    position: relative;
+    border-radius: 5px;
+    background: rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0px 0px 0px 0px rgba(255, 255, 255, .1);
+    -moz-box-shadow: 0px 0px 0px 0px rgba(255, 255, 255, .1);
+    box-shadow: 0px 0px 0px 0px rgba(255, 255, 255, .1);
+        transition: 0.3s ease-out;
+
+}
+
+
+
+.devblog-container:hover {
+    cursor: pointer;
+    -webkit-box-shadow: 0px 0px 0px 10px rgba(255, 255, 255, .1);
+    -moz-box-shadow: 0px 0px 0px 10px rgba(255, 255, 255, .1);
+    box-shadow: 0px 0px 0px 10px rgba(255, 255, 255, .1);
+}
+
+
+
+
+
+
+.devblog-title {
+
+    padding: 10px;
+    margin: 0 0 200px 0;
+}
+
+.devblog-title h1 {
+    opacity: 0.8;
+    margin: 0;
+
+}
+
+.devblog-title h2 {
+    font-size: 15px;
+    opacity: 0.5
+}
+
+.devblog-title p {
+    font-weight: 100;
+    opacity: 0.7;
+    font-size: 15px;
+}
+
+
+
+.devblog-image {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: url(images/devblog1.jpg);
+    height: 200px;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+
+
+
+
+/*
+.noise {
+    background-image: url(data:image/png;base64,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);
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    position: absolute;
+    opacity: 0.4;
+}*/

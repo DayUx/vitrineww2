@@ -1,5 +1,5 @@
-# Site vitrine serveur GMOD NormandyRp
+# myportfolio
 
-Site vitrine pour le serveur Normandy RP sur le jeu GMOD.
+mon portfolio | WIP
 
-https://dayux.github.io/vitrineww2/
+https://dayux.github.io/myportfolio/
