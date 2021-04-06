@@ -1,5 +1,5 @@
 html {
-    height: 100vh;
+    height: 100%;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
@@ -23,16 +23,17 @@ body {
 
 
 body:after {
-    background-image: url(images/noise.png);
+    background-image: url(images/overlayLine.svg);
+    background-size: 10px;
     content: " ";
     position: absolute;
     left: 0;
     right: 0;
     top: 0;
     bottom: 0;
-    z-index: 500;
+    z-index: -1;
     pointer-events: none;
-    opacity: 0.7;
+    opacity: 0.5;
 }
 
 nav {
@@ -71,22 +72,43 @@ nav {
     outline-style: none;
     float: left;
     text-align: left;
-    color: #ededed;    
-    border: 0.3vw solid #ededed;
+    color: rgba(237,237,237,1);
+    border: 1px solid #ededed;
     transition: 0.4s all;
-    background: transparent;
+    background: rgba(237,237,237,0.4);
     font-size: 28px;
     padding: 20px;
-    border-radius: 1px;
-    box-shadow: inset 0 0 0 0 #ededed;
+    border-radius: 5px;
+    position: relative;
     opacity: 0.8;
     margin-top: 50px
 }
 
-.pagecontent button:hover {
-    cursor: pointer;
-    box-shadow: inset 0 -100px 0 0 #ededed;
-    color: rgba(39, 54, 63, 1);    
+.pagecontent button:after {
+    background-image: url(images/overlayDot.png);
+    background-size: 5px;
+    content: "";
+    position: absolute;
+    z-index: -1;
+    opacity: 0.1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    transition: 0.3s all;
+}
+
+
+
+
+.pagecontent button:hover:after {
+    opacity: 0.4;
+}
+
+.pagecontent button:hover{
+        cursor: pointer;
+
 }
 
 .logo {
@@ -146,7 +168,7 @@ nav ol {
     justify-content: center;
     flex-direction: row;
     flex-wrap: wrap;
-    max-width: 400px;
+    max-width: 100%;
 
     padding: 0;
     
@@ -239,31 +261,39 @@ footer img {
     position: relative;
     border-radius: 5px;
     background: rgba(0, 0, 0, 0.1);
-    -webkit-box-shadow: 0px 0px 0px 0px rgba(255, 255, 255, .1);
-    -moz-box-shadow: 0px 0px 0px 0px rgba(255, 255, 255, .1);
-    box-shadow: 0px 0px 0px 0px rgba(255, 255, 255, .1);
+    min-height: 300px;
         transition: 0.3s ease-out;
-
+        cursor: pointer;
+    
 }
 
-
-
-.devblog-container:hover {
-    cursor: pointer;
-    -webkit-box-shadow: 0px 0px 0px 10px rgba(255, 255, 255, .1);
-    -moz-box-shadow: 0px 0px 0px 10px rgba(255, 255, 255, .1);
-    box-shadow: 0px 0px 0px 10px rgba(255, 255, 255, .1);
+.devblog-container:after {
+    content:"EN SAVOIR PLUS";
+    text-align: center;
+    position: absolute;
+    left: 0;
+    right: 0;
+    font-weight: 800;
+    background: #000;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.2s all;
 }
-
-
-
+.devblog-container:hover:after {
+    opacity: 0.5;
+}
 
 
 
 .devblog-title {
-
+    width: calc(50% - 20px);
     padding: 10px;
-    margin: 0 0 200px 0;
+    height: 100%;
 }
 
 .devblog-title h1 {
@@ -287,11 +317,12 @@ footer img {
 
 .devblog-image {
     position: absolute;
+    top: 0;
     bottom: 0;
-    left: 0;
+    right: 0;
     background: url(images/devblog1.jpg);
-    height: 200px;
-    width: 100%;
+    height: auto;
+    width: 50%;
     background-size: cover;
     background-position: center;
 }
