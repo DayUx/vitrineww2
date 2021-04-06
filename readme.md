@@ -1,5 +1,5 @@
-# myportfolio
+# vitrineww2
 
 mon portfolio | WIP
 
-https://dayux.github.io/myportfolio/
+https://dayux.github.io/vitrineww2
