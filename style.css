@@ -84,13 +84,12 @@ nav {
     margin-top: 50px
 }
 
-.pagecontent button:after {
-    background-image: url(images/overlayDot.png);
-    background-size: 5px;
+.pagecontent button:before{
     content: "";
     position: absolute;
     z-index: -1;
-    opacity: 0.1;
+    background: linear-gradient(45deg, rgba(2,0,36,0) 0%, rgba(255,255,255,0.2) 48%, rgba(9,9,121,0) 100%);
+    transform: translate(-100%);
     left: 0;
     top: 0;
     width: 100%;
@@ -99,11 +98,8 @@ nav {
     transition: 0.3s all;
 }
 
-
-
-
-.pagecontent button:hover:after {
-    opacity: 0.4;
+.pagecontent button:hover:before{
+        transform: translate(100%);
 }
 
 .pagecontent button:hover{
