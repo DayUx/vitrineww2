@@ -81,7 +81,8 @@ nav {
     border-radius: 5px;
     position: relative;
     opacity: 0.8;
-    margin-top: 50px
+    margin-top: 50px;
+    overflow : hidden;
 }
 
 .pagecontent button:before{
